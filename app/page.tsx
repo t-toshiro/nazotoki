@@ -20,7 +20,7 @@ export default function Home() {
       <div className="w-full flex justify-center pt-6 md:pt-10 px-4">
         <div className="relative w-full max-w-2xl aspect-[2/3] image-fade-mask pointer-events-none select-none overflow-hidden">
           <Image
-            src="/nazotoki_photo.jpg"
+            src="/nazotoki_poster.jpg"
             alt="未来通信探偵 ポスター"
             fill
             className="object-contain object-top"
