@@ -52,7 +52,7 @@ export default function Home() {
               </span>
             </h1>
             <p className="text-xl font-bold text-yellow-300 tracking-widest mt-4 drop-shadow-sm">
-              隠された「お得」を見つけ出せ
+              隠された「おトク」を見つけ出せ
             </p>
           </div>
 
