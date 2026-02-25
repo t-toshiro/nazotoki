@@ -17,10 +17,12 @@ export default function Home() {
     // 背景色をポスターの水色に合わせて設定
     <div className="min-h-screen bg-[#3EBFFB] text-white font-sans relative pb-24 overflow-x-hidden selection:bg-pink-500">
       {/* 1. トップ画像エリア */}
+      {/* 1. トップ画像エリア */}
       <div className="w-full flex justify-center pt-6 md:pt-10 px-4">
-        <div className="relative w-full max-w-2xl aspect-[2/3] image-fade-mask pointer-events-none select-none overflow-hidden">
+        {/* ★変更ポイント1: 箱の縦幅をポスターの比率に近づけるため aspect-[2/3] を aspect-[3/4] に変更 */}
+        <div className="relative w-full max-w-2xl aspect-[3/4] pointer-events-none select-none overflow-hidden">
           <Image
-            src="/nazotoki_poster.jpg"
+            src="/nazotoki_photo.jpg"
             alt="未来通信探偵 ポスター"
             fill
             className="object-contain object-top"
@@ -30,7 +32,8 @@ export default function Home() {
       </div>
 
       {/* スクロールを促す▼マーク */}
-      <div className="flex justify-center my-8 animate-bounce drop-shadow-md relative z-10">
+      {/* ★変更ポイント2: my-8（上下に余白）を、マイナスマージン（-mt-4）に変更して物理的に上に引き上げる */}
+      <div className="flex justify-center mt-4 mb-10 animate-bounce drop-shadow-md relative z-10">
         <span className="text-white text-sm font-bold tracking-widest flex flex-col items-center text-shadow">
           SCROLL
           <span className="mt-2 border-x-[10px] border-x-transparent border-t-[12px] border-t-white w-0 h-0 filter drop-shadow"></span>
