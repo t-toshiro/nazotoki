@@ -22,7 +22,7 @@ export default function Home() {
         {/* ★変更ポイント1: 箱の縦幅をポスターの比率に近づけるため aspect-[2/3] を aspect-[3/4] に変更 */}
         <div className="relative w-full max-w-2xl aspect-[3/4] pointer-events-none select-none overflow-hidden">
           <Image
-            src="/nazotoki_photo.jpg"
+            src="/nazotoki_poster.jpg"
             alt="未来通信探偵 ポスター"
             fill
             className="object-contain object-top"
