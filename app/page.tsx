@@ -18,7 +18,6 @@ export default function Home() {
     <div className="min-h-screen bg-[#3EBFFB] text-white font-sans relative pb-24 overflow-x-hidden selection:bg-pink-500">
       {/* 1. トップ画像エリア */}
       <div className="w-full flex justify-center pt-6 md:pt-10 px-4">
-        {/* 箱の縦幅をポスターの比率に合わせて aspect-[3/4] に */}
         <div className="relative w-full max-w-2xl aspect-[3/4] pointer-events-none select-none overflow-hidden">
           <Image
             src="/nazotoki_poster.jpg"
@@ -40,7 +39,8 @@ export default function Home() {
 
       {/* 2. コンテンツエリア */}
       <div className="relative z-10 pb-10">
-        <div className="flex flex-col items-center justify-center px-6 space-y-12 text-center max-w-2xl mx-auto">
+        {/* スマホ画面用に左右の余白(px)を少し調整 */}
+        <div className="flex flex-col items-center justify-center px-4 sm:px-6 space-y-12 text-center max-w-2xl mx-auto">
           {/* タイトルセクション */}
           <div className="space-y-3 drop-shadow-md">
             <h1 className="text-4xl sm:text-5xl font-black tracking-tighter">
@@ -49,83 +49,94 @@ export default function Home() {
                 探偵
               </span>
             </h1>
-            <p className="text-xl font-bold text-yellow-300 tracking-widest mt-4 drop-shadow-sm">
+            <p className="text-lg sm:text-xl font-bold text-yellow-300 tracking-widest mt-4 drop-shadow-sm">
               隠された「おトク」を見つけ出せ
             </p>
           </div>
 
-          {/* ご挨拶テキスト（改行を整えて読みやすく） */}
-          <div className="text-base sm:text-lg font-bold text-white drop-shadow-md leading-loose tracking-wider">
+          {/* ご挨拶テキスト */}
+          {/* スマホ(text-sm)とPC(text-lg)で文字サイズを可変にし、スマホ時のみタイトルを改行 */}
+          <div className="text-sm sm:text-base md:text-lg font-bold text-white drop-shadow-md leading-loose tracking-wider px-2">
             <p>この度は</p>
-            <p>「未来通信探偵 〜隠された「おトク」を見つけ出せ〜」</p>
+            <p>
+              「未来通信探偵
+              <br className="sm:hidden" />
+              〜隠された「おトク」を見つけ出せ〜」
+            </p>
             <p>へのご参加、誠にありがとうございます</p>
           </div>
 
           {/* 使用アイテム一覧セクション */}
-          <div className="w-full bg-black/90 border-2 border-pink-500 rounded-2xl p-8 shadow-[0_0_20px_rgba(236,72,153,0.3)] relative z-20">
-            <h2 className="text-2xl font-bold text-pink-500 mb-6 tracking-widest border-b border-gray-700 pb-4">
+          <div className="w-full bg-black/90 border-2 border-pink-500 rounded-2xl p-6 sm:p-8 shadow-[0_0_20px_rgba(236,72,153,0.3)] relative z-20 text-left">
+            <h2 className="text-xl sm:text-2xl font-bold text-pink-500 mb-6 tracking-widest border-b border-gray-700 pb-4">
               使用するアイテム一覧
             </h2>
-            {/* 行間を詰め（space-y-2）、左揃えにしつつブロック全体を中央配置 */}
-            <div className="inline-block text-left text-base sm:text-lg text-white font-medium tracking-wide space-y-2">
-              <p>・謎の紙</p>
-              <p>・チラシ</p>
-              <p>・ペグシル</p>
-              <p>・バインダー</p>
-              <p>・スマートフォン</p>
-            </div>
-            {/* 注意書きは少し色を変えて強調 */}
-            <p className="mt-6 text-sm text-yellow-300 font-bold tracking-widest">
+            <ul className="text-sm sm:text-base md:text-lg text-white font-medium tracking-wide space-y-2 pl-2">
+              <li>・謎の紙</li>
+              <li>・チラシ</li>
+              <li>・ペグシル</li>
+              <li>・バインダー</li>
+              <li>・スマートフォン</li>
+            </ul>
+            <p className="mt-6 text-xs sm:text-sm text-yellow-300 font-bold tracking-widest leading-relaxed">
               ※不備がある場合はスタッフへお声がけください
             </p>
           </div>
 
           {/* 注意事項セクション */}
-          <div className="w-full bg-black/90 border-2 border-pink-500 rounded-2xl p-8 shadow-[0_0_20px_rgba(236,72,153,0.3)] relative z-20">
-            <h2 className="text-2xl font-bold text-pink-500 mb-6 tracking-widest border-b border-gray-700 pb-4">
+          <div className="w-full bg-black/90 border-2 border-pink-500 rounded-2xl p-6 sm:p-8 shadow-[0_0_20px_rgba(236,72,153,0.3)] relative z-20 text-left">
+            <h2 className="text-xl sm:text-2xl font-bold text-pink-500 mb-6 tracking-widest border-b border-gray-700 pb-4">
               注意事項
             </h2>
-            {/* 長文なので text-left を追加し、行間を適度な広さに調整 */}
-            <div className="inline-block text-left space-y-6 text-base sm:text-lg text-white font-medium leading-relaxed tracking-wide">
-              <p>・プレイ可能時間は〇〇時〜〇〇時までとなります。</p>
-              <p>
-                ・ショッピングモール内を移動する際は走らずに歩いてのご移動をお願いいたします。
-              </p>
-              <p>
-                ・謎の答えを大声で話す行為はお控えください。他にプレイをされている方へのご配慮をお願いいたします。
-              </p>
-              <p>
-                ・もし謎に行き詰まってしまった時はWebページ右下のHINTボタンからヒントをご活用ください。それでもわからない時は先輩探偵に力を貸してもらいましょう。
-              </p>
-            </div>
+            {/* ★ここがポイント：flex を使うことで、スマホで2行になっても「・」の下に文字が潜り込みません */}
+            <ul className="space-y-5 text-sm sm:text-base md:text-lg text-white font-medium leading-relaxed tracking-wide">
+              <li className="flex items-start">
+                <span className="mr-2">・</span>
+                <span>プレイ可能時間は〇〇時〜〇〇時までとなります。</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">・</span>
+                <span>
+                  ショッピングモール内を移動する際は走らずに歩いてのご移動をお願いいたします。
+                </span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">・</span>
+                <span>
+                  謎の答えを大声で話す行為はお控えください。他にプレイをされている方へのご配慮をお願いいたします。
+                </span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">・</span>
+                <span>
+                  もし謎に行き詰まってしまった時はWebページ右下のHINTボタンからヒントをご活用ください。それでもわからない時は先輩探偵に力を貸してもらいましょう。
+                </span>
+              </li>
+            </ul>
           </div>
 
           {/* === プロローグ（ストーリー）セクション === */}
-          {/* 黒背景・枠線を削除し、テキストに直接ドロップシャドウをあてて浮き立たせる */}
-          <div className="w-full px-2 sm:px-8 relative z-20 mt-4">
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-pink-400 mb-8 tracking-widest drop-shadow-[0_0_15px_rgba(244,114,182,0.8)]">
+          <div className="w-full px-2 relative z-20 mt-4 text-left sm:text-center">
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-pink-400 mb-6 tracking-widest drop-shadow-[0_0_15px_rgba(244,114,182,0.8)] text-center">
               Story
             </h2>
-            <div className="space-y-5 text-base sm:text-lg text-white font-bold leading-loose tracking-wider drop-shadow-md">
+            {/* 手動の改行を削除し、スマホでは左揃えで自然に折り返させ、最後の決め台詞だけ中央揃えに */}
+            <div className="space-y-5 text-sm sm:text-base md:text-lg text-white font-bold leading-relaxed sm:leading-loose tracking-wider drop-shadow-md">
               <p>
-                突如現れた怪盗「D」によって、
-                <br className="hidden sm:block" />
-                au・UQモバイルのお得情報がイオン幕張新都心の中に隠されてしまった！
+                突如現れた怪盗「D」によって、au・UQモバイルのお得情報がイオン幕張新都心の中に隠されてしまった！
               </p>
               <p>
-                新人探偵助手として捜査の協力依頼を受けたあなたは、
-                <br className="hidden sm:block" />
-                怪盗が残した手がかりを解き明かし、
+                新人探偵助手として捜査の協力依頼を受けたあなたは、怪盗が残した手がかりを解き明かし、
               </p>
-              <p className="text-xl text-yellow-300">
+              <p className="text-base sm:text-xl text-yellow-300 text-center mt-8">
                 見事「おトク」を見つけ出すことができるか！？
               </p>
             </div>
           </div>
 
           {/* 3. 回答フォーム（LAST ANSWER） */}
-          <div className="w-full bg-black/90 border-2 border-pink-500 rounded-2xl p-8 shadow-[0_0_20px_rgba(236,72,153,0.3)] relative z-20 mt-4">
-            <h2 className="text-xl font-bold text-orange-400 mb-6 uppercase tracking-widest border-b border-gray-700 pb-4">
+          <div className="w-full bg-black/90 border-2 border-pink-500 rounded-2xl p-6 sm:p-8 shadow-[0_0_20px_rgba(236,72,153,0.3)] relative z-20 mt-4 text-left">
+            <h2 className="text-xl sm:text-2xl font-bold text-orange-400 mb-6 uppercase tracking-widest border-b border-gray-700 pb-4 text-center">
               Last Answer
             </h2>
 
@@ -134,17 +145,17 @@ export default function Home() {
                 name="answer"
                 type="text"
                 placeholder="回答を入力してください"
-                className="w-full px-5 py-4 text-lg text-black bg-white rounded-lg border-4 border-transparent focus:outline-none focus:border-orange-500 transition-all font-bold placeholder-gray-400"
+                className="w-full px-4 py-3 sm:px-5 sm:py-4 text-base sm:text-lg text-black bg-white rounded-lg border-4 border-transparent focus:outline-none focus:border-orange-500 transition-all font-bold placeholder-gray-400"
                 required
               />
               {message && (
-                <p className="text-pink-500 font-bold text-sm bg-pink-500/10 py-2 px-4 rounded-lg">
+                <p className="text-pink-500 font-bold text-sm bg-pink-500/10 py-2 px-4 rounded-lg text-center">
                   {message}
                 </p>
               )}
               <button
                 type="submit"
-                className="w-full bg-transparent border-2 border-pink-500 hover:bg-pink-500 text-pink-500 hover:text-white font-bold py-4 px-6 rounded-full text-lg transition-all active:scale-95"
+                className="w-full bg-transparent border-2 border-pink-500 hover:bg-pink-500 text-pink-500 hover:text-white font-bold py-3 sm:py-4 px-6 rounded-full text-base sm:text-lg transition-all active:scale-95"
               >
                 確定
               </button>
