@@ -3,15 +3,47 @@
 import Image from "next/image";
 import Link from "next/link";
 import { checkAnswer } from "./actions";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 export default function Home() {
   const [message, setMessage] = useState("");
+  // ★追加：どの動画を表示するか管理するステート ("none" | "midway" | "ending")
+  const [videoState, setVideoState] = useState<"none" | "midway" | "ending">(
+    "none",
+  );
+
+  // ★追加：動画が出現したときに自動スクロールするための参照
+  const videoRef = useRef<HTMLDivElement>(null);
+
   const handleSubmit = async (formData: FormData) => {
+    // 送信時に一旦リセット
     setMessage("");
+    setVideoState("none");
+
     const result = await checkAnswer(formData);
-    if (result?.message) setMessage(result.message);
+
+    // サーバーからの返答に応じて状態を変更
+    if (result?.status === "midway") {
+      setVideoState("midway");
+    } else if (result?.status === "ending") {
+      setVideoState("ending");
+    } else if (result?.message) {
+      setMessage(result.message);
+    }
   };
+
+  // ★追加：動画ステータスが変わって表示されたら、そこにフワッと自動スクロールする
+  useEffect(() => {
+    if (videoState !== "none" && videoRef.current) {
+      // 少し遅延させることで、DOMが描画された後に綺麗にスクロールする
+      setTimeout(() => {
+        videoRef.current?.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+      }, 100);
+    }
+  }, [videoState]);
 
   return (
     // 背景色をポスターの水色に合わせて設定
@@ -39,7 +71,6 @@ export default function Home() {
 
       {/* 2. コンテンツエリア */}
       <div className="relative z-10 pb-10">
-        {/* スマホ画面用に左右の余白(px)を少し調整 */}
         <div className="flex flex-col items-center justify-center px-4 sm:px-6 space-y-12 text-center max-w-2xl mx-auto">
           {/* タイトルセクション */}
           <div className="space-y-3 drop-shadow-md">
@@ -55,7 +86,6 @@ export default function Home() {
           </div>
 
           {/* ご挨拶テキスト */}
-          {/* スマホ(text-sm)とPC(text-lg)で文字サイズを可変にし、スマホ時のみタイトルを改行 */}
           <div className="text-sm sm:text-base md:text-lg font-bold text-white drop-shadow-md leading-loose tracking-wider px-2">
             <p>この度は</p>
             <p>
@@ -88,7 +118,6 @@ export default function Home() {
             <h2 className="text-xl sm:text-2xl font-bold text-pink-500 mb-6 tracking-widest border-b border-gray-700 pb-4">
               注意事項
             </h2>
-            {/* ★ここがポイント：flex を使うことで、スマホで2行になっても「・」の下に文字が潜り込みません */}
             <ul className="space-y-5 text-sm sm:text-base md:text-lg text-white font-medium leading-relaxed tracking-wide">
               <li className="flex items-start">
                 <span className="mr-2">・</span>
@@ -115,12 +144,11 @@ export default function Home() {
             </ul>
           </div>
 
-          {/* === プロローグ（ストーリー）セクション === */}
+          {/* プロローグ（ストーリー）セクション */}
           <div className="w-full px-2 relative z-20 mt-4 text-left sm:text-center">
             <h2 className="text-3xl sm:text-4xl font-serif font-bold text-pink-400 mb-6 tracking-widest drop-shadow-[0_0_15px_rgba(244,114,182,0.8)] text-center">
               Story
             </h2>
-            {/* 手動の改行を削除し、スマホでは左揃えで自然に折り返させ、最後の決め台詞だけ中央揃えに */}
             <div className="space-y-5 text-sm sm:text-base md:text-lg text-white font-bold leading-relaxed sm:leading-loose tracking-wider drop-shadow-md">
               <p>
                 突如現れた怪盗「D」によって、au・UQモバイルのお得情報がイオン幕張新都心の中に隠されてしまった！
@@ -161,6 +189,62 @@ export default function Home() {
               </button>
             </form>
           </div>
+
+          {/* === 新規追加：動画表示エリア === */}
+          {/* videoStateが "none" 以外の時に表示されます */}
+          {videoState !== "none" && (
+            <div
+              ref={videoRef}
+              className="w-full relative z-20 mt-4 transition-all duration-700 ease-in-out opacity-100 translate-y-0"
+            >
+              {/* ニセモノ（途中動画）の場合 */}
+              {videoState === "midway" && (
+                <div className="bg-black/90 border-2 border-orange-500 rounded-2xl p-6 sm:p-8 shadow-[0_0_20px_rgba(249,115,22,0.4)] text-center">
+                  <h2 className="text-xl sm:text-2xl font-bold text-orange-400 mb-4 tracking-widest">
+                    途中経過
+                  </h2>
+                  <div className="w-full aspect-video rounded-lg overflow-hidden border border-orange-500/30">
+                    <video
+                      controls
+                      autoPlay
+                      className="w-full h-full object-cover bg-gray-900"
+                    >
+                      <source src="/midway.mp4" type="video/mp4" />
+                      お使いのブラウザは動画の再生に対応していません。
+                    </video>
+                  </div>
+                  <p className="mt-6 text-white font-medium tracking-wider leading-relaxed text-sm sm:text-base">
+                    怪盗「D」の仕掛けた罠だったようだ……
+                    <br />
+                    引き続き捜査を頼む！
+                  </p>
+                </div>
+              )}
+
+              {/* ホンモノ（エンディング動画）の場合 */}
+              {videoState === "ending" && (
+                <div className="bg-black/90 border-2 border-yellow-400 rounded-2xl p-6 sm:p-8 shadow-[0_0_20px_rgba(250,204,21,0.4)] text-center">
+                  <h2 className="text-3xl sm:text-4xl font-serif font-bold text-yellow-400 mb-6 tracking-widest drop-shadow-[0_0_15px_rgba(250,204,21,0.8)]">
+                    TRUE END
+                  </h2>
+                  <div className="w-full aspect-video rounded-lg overflow-hidden border border-yellow-400/30">
+                    <video
+                      controls
+                      autoPlay
+                      className="w-full h-full object-cover bg-gray-900"
+                    >
+                      <source src="/ending.mp4" type="video/mp4" />
+                      お使いのブラウザは動画の再生に対応していません。
+                    </video>
+                  </div>
+                  <div className="mt-6 space-y-3 text-white font-bold tracking-wider text-sm sm:text-base">
+                    <p>見事、隠された「おトク」を見つけ出した！</p>
+                    <p>キミのヒラメキに感謝する！</p>
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </div>
 
