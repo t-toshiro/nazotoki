@@ -1,19 +1,51 @@
 export default function ItemsTable() {
   return (
     <div className="w-full bg-black/90 border-2 border-pink-500 rounded-2xl p-6 sm:p-8 shadow-[0_0_20px_rgba(236,72,153,0.3)] relative z-20 text-left">
-      {/* ↓ ここに text-center を追加しました */}
       <h2 className="text-xl sm:text-2xl font-bold text-pink-500 mb-6 tracking-widest border-b border-gray-700 pb-4 text-center">
-        使用するアイテム一覧
+        <ruby>
+          使<rt>つか</rt>
+        </ruby>
+        うアイテム
+        <ruby>
+          一覧<rt>いちらん</rt>
+        </ruby>
       </h2>
-      <ul className="text-sm sm:text-base md:text-lg text-white font-medium tracking-wide space-y-2 pl-2">
-        <li>・謎の紙</li>
-        <li>・UQmobileのチラシ</li>
-        <li>・ペグシル</li>
+      {/* ルビが入るので、space-y-2 を space-y-4 に変更してリストの縦幅にゆとりを持たせました */}
+      <ul className="text-sm sm:text-base md:text-lg text-white font-medium tracking-wide space-y-4 pl-2">
+        <li>
+          ・
+          <ruby>
+            謎<rt>なぞ</rt>
+          </ruby>
+          の
+          <ruby>
+            紙<rt>かみ</rt>
+          </ruby>
+        </li>
+        <li>
+          ・UQ mobile{" "}
+          <ruby>
+            親子<rt>おやこ</rt>
+          </ruby>
+          <ruby>
+            応援割<rt>おうえんわり</rt>
+          </ruby>
+          のチラシ
+        </li>
+        <li>
+          ・
+          <ruby>
+            筆記用具<rt>ひっきようぐ</rt>
+          </ruby>
+        </li>
         <li>・バインダー</li>
         <li>・スマートフォン</li>
       </ul>
-      <p className="mt-6 text-xs sm:text-sm text-yellow-300 font-bold tracking-widest leading-relaxed">
-        ※不備がある場合はスタッフへお声がけください
+      {/* ルビが被らないように leading-loose に変更 */}
+      <p className="mt-6 text-xs sm:text-sm text-yellow-300 font-bold tracking-wide leading-loose text-center">
+        ※<span className="inline-block">足りないものがある場合は</span>
+        <br className="sm:hidden" />
+        <span className="inline-block">スタッフへ声をかけてね</span>
       </p>
     </div>
   );

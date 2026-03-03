@@ -1,31 +1,144 @@
 export default function WarningsSection() {
   return (
     <div className="w-full bg-black/90 border-2 border-pink-500 rounded-2xl p-6 sm:p-8 shadow-[0_0_20px_rgba(236,72,153,0.3)] relative z-20 text-left">
-      {/* ↓ ここにも text-center を追加しました */}
       <h2 className="text-xl sm:text-2xl font-bold text-pink-500 mb-6 tracking-widest border-b border-gray-700 pb-4 text-center">
-        注意事項
+        <ruby>
+          気<rt>き</rt>
+        </ruby>
+        をつけること
       </h2>
-      <ul className="space-y-5 text-sm sm:text-base md:text-lg text-white font-medium leading-relaxed tracking-wide">
-        <li className="flex items-start">
-          <span className="mr-2">・</span>
-          <span>プレイ可能時間は 10:30〜18:00 までとなります。</span>
-        </li>
+      {/* ルビが被らないよう leading-loose に変更し、項目間の余白を space-y-6 に広げました */}
+      <ul className="space-y-6 text-sm sm:text-base md:text-lg text-white font-medium leading-loose tracking-wide">
         <li className="flex items-start">
           <span className="mr-2">・</span>
           <span>
-            ショッピングモール内を移動する際は走らずに歩いてのご移動をお願いいたします。
+            <ruby>
+              遊<rt>あそ</rt>
+            </ruby>
+            べる
+            <ruby>
+              時間<rt>じかん</rt>
+            </ruby>
+            は【10:30～18:30】なので、この
+            <ruby>
+              時間<rt>じかん</rt>
+            </ruby>
+            の
+            <ruby>
+              間<rt>あいだ</rt>
+            </ruby>
+            に
+            <ruby>
+              遊<rt>あそ</rt>
+            </ruby>
+            ぼう！
           </span>
         </li>
         <li className="flex items-start">
           <span className="mr-2">・</span>
           <span>
-            謎の答えを大声で話す行為はお控えください。他にプレイをされている方へのご配慮をお願いいたします。
+            ショッピングモールの
+            <ruby>
+              中<rt>なか</rt>
+            </ruby>
+            では、
+            <ruby>
+              走<rt>はし</rt>
+            </ruby>
+            らないようにしよう。ゆっくり
+            <ruby>
+              歩<rt>ある</rt>
+            </ruby>
+            いてね！
           </span>
         </li>
         <li className="flex items-start">
           <span className="mr-2">・</span>
           <span>
-            もし謎に行き詰まってしまった時はWebページ右下のHINTボタンからヒントをご活用ください。それでもわからない時は先輩探偵に力を貸してもらいましょう。
+            <ruby>
+              謎<rt>なぞ</rt>
+            </ruby>
+            の
+            <ruby>
+              答<rt>こた</rt>
+            </ruby>
+            えは、
+            <ruby>
+              大<rt>おお</rt>
+            </ruby>
+            きな
+            <ruby>
+              声<rt>こえ</rt>
+            </ruby>
+            で
+            <ruby>
+              言<rt>い</rt>
+            </ruby>
+            わないようにしよう。
+            <ruby>
+              他<rt>ほか</rt>
+            </ruby>
+            に
+            <ruby>
+              遊<rt>あそ</rt>
+            </ruby>
+            んでいる
+            <ruby>
+              人<rt>ひと</rt>
+            </ruby>
+            もいるから、
+            <ruby>
+              小<rt>ちい</rt>
+            </ruby>
+            さな
+            <ruby>
+              声<rt>こえ</rt>
+            </ruby>
+            で
+            <ruby>
+              話<rt>はな</rt>
+            </ruby>
+            そう！
+          </span>
+        </li>
+        <li className="flex items-start">
+          <span className="mr-2">・</span>
+          <span>
+            <ruby>
+              謎<rt>なぞ</rt>
+            </ruby>
+            が
+            <ruby>
+              難<rt>むずか</rt>
+            </ruby>
+            しくてわからない
+            <ruby>
+              時<rt>とき</rt>
+            </ruby>
+            は、Webページの
+            <ruby>
+              右下<rt>みぎした</rt>
+            </ruby>
+            にある「ヒントボタン」を
+            <ruby>
+              押<rt>お</rt>
+            </ruby>
+            してヒントをみよう。 それでもわからなかったら、
+            <ruby>
+              先輩<rt>せんぱい</rt>
+            </ruby>
+            <ruby>
+              探偵<rt>たんてい</rt>
+            </ruby>
+            に
+            <ruby>
+              声<rt>こえ</rt>
+            </ruby>
+            をかけて
+            <ruby>
+              助<rt>たす</rt>
+            </ruby>
+            けてもらおう！
           </span>
         </li>
       </ul>
