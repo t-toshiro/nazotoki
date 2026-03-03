@@ -51,9 +51,9 @@ const QUIZ_STEPS = [
             <p className="text-sm sm:text-base text-white leading-relaxed font-medium tracking-wide">
               ここまで君たちが解いた謎は確実にあっている。紙の中ではなく、実際に
               <span className="text-yellow-300 font-bold">
-                「たんていのぼうしとあたま」の間
+                「たんていのぼうしとあたま」
               </span>
-              を探そう！特設ブースから離れる必要はないぞ！俺に手伝えることがあればなんでも言ってくれ！
+              の間を探そう！特設ブースから離れる必要はないぞ！俺に手伝えることがあればなんでも言ってくれ！
             </p>
           </div>
         </div>
