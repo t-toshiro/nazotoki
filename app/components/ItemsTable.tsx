@@ -1,12 +1,13 @@
 export default function ItemsTable() {
   return (
     <div className="w-full bg-black/90 border-2 border-pink-500 rounded-2xl p-6 sm:p-8 shadow-[0_0_20px_rgba(236,72,153,0.3)] relative z-20 text-left">
-      <h2 className="text-xl sm:text-2xl font-bold text-pink-500 mb-6 tracking-widest border-b border-gray-700 pb-4">
+      {/* ↓ ここに text-center を追加しました */}
+      <h2 className="text-xl sm:text-2xl font-bold text-pink-500 mb-6 tracking-widest border-b border-gray-700 pb-4 text-center">
         使用するアイテム一覧
       </h2>
       <ul className="text-sm sm:text-base md:text-lg text-white font-medium tracking-wide space-y-2 pl-2">
         <li>・謎の紙</li>
-        <li>・チラシ</li>
+        <li>・UQmobileのチラシ</li>
         <li>・ペグシル</li>
         <li>・バインダー</li>
         <li>・スマートフォン</li>

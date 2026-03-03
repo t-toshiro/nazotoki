@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import AnswerForm from "./components/AnswerForm";
-import VideoSection from "./components/VIdeoSection";
+import VideoSection from "./components/VideoSection";
 import Poster from "./components/Poster";
 import Title from "./components/Title";
 import ItemsTable from "./components/ItemsTable";
@@ -12,20 +12,46 @@ import StorySection from "./components/StorySection";
 const QUIZ_STEPS = [
   {
     stepNum: 1,
-    formTitle: "さいごのこたえ",
+    formTitle: "最終解答",
     videoSrc: "/midway.mp4",
     videoDesc: (
-      <>
-        怪盗「D」の仕掛けた罠だったようだ……
-        <br />
-        引き続き捜査を頼む！
-      </>
+      <div className="space-y-6 w-full">
+        {/* 元々のメッセージ */}
+        <p className="text-center">
+          怪盗「D」の仕掛けた罠だったようだ……
+          <br />
+          引き続き捜査を頼む！
+        </p>
+
+        {/* ========================================= */}
+        {/* ★ 追加：探偵EDOSHIからのアドバイス欄 ★ */}
+        {/* ========================================= */}
+        <div className="bg-blue-950/60 border-2 border-blue-500 rounded-xl p-5 sm:p-6 text-left shadow-[0_0_15px_rgba(59,130,246,0.3)] relative mt-4">
+          {/* 左上のちょっとしたアクセント（探偵バッジ風） */}
+          <div className="absolute -top-3 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full border border-blue-400">
+            ADVICE
+          </div>
+
+          <h3 className="text-blue-300 font-bold text-lg sm:text-xl mb-3 mt-1 flex items-center tracking-widest">
+            <span className="mr-2 text-2xl">💡</span>
+            探偵EDOSHIからのアドバイス
+          </h3>
+
+          <p className="text-sm sm:text-base text-white leading-relaxed font-medium tracking-wide">
+            ここまで君たちが解いた謎は確実にあっている。紙の中ではなく、実際に
+            <span className="text-yellow-300 font-bold">
+              「たんていのぼうしとあたま」の間
+            </span>
+            を探そう！特設ブースから離れる必要はないぞ！俺に手伝えることがあればなんでも言ってくれ！
+          </p>
+        </div>
+      </div>
     ),
     isEnding: false,
   },
   {
     stepNum: 2,
-    formTitle: "ほんとうのこたえ",
+    formTitle: "本当の最終解答",
     videoSrc: "/ending.mp4",
     videoDesc: (
       <>
@@ -39,8 +65,6 @@ const QUIZ_STEPS = [
 
 export default function Home() {
   const [step, setStep] = useState<number>(1);
-
-  const videoRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (step > 1) {

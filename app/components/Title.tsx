@@ -17,10 +17,9 @@ export default function () {
       {/* ご挨拶・アイテム・注意事項・ストーリー（省略せずにそのまま残しています） */}
       <div className="text-sm sm:text-base md:text-lg font-bold text-white drop-shadow-md leading-loose tracking-wider px-2">
         <p>この度は</p>
-        <p>
-          「未来通信探偵
-          <br className="sm:hidden" />
-          〜隠された「おトク」を見つけ出せ〜」
+        {/* ↓ <br>を削除し、改行禁止（whitespace-nowrap）とスマホ用の微調整サイズを追加 */}
+        <p className="whitespace-nowrap text-[13px] sm:text-base md:text-lg">
+          「未来通信探偵 〜隠された「おトク」を見つけ出せ〜」
         </p>
         <p>へのご参加、誠にありがとうございます</p>
       </div>
