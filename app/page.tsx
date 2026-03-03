@@ -67,8 +67,9 @@ const QUIZ_STEPS = [
     videoSrc: "/ending.mp4",
     videoDesc: (
       <>
-        <p>見事、隠された「おトク」を見つけ出した！</p>
-        <p>キミのヒラメキに感謝する！</p>
+        <p>協力ありがとう！</p>
+        <p>君たちの謎解き力は「ホンモノ」だ！</p>
+        <p>今後も捜査の協力を頼む！</p>
       </>
     ),
     isEnding: true,
