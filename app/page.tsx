@@ -9,6 +9,7 @@ import Title from "./components/Title";
 import ItemsTable from "./components/ItemsTable";
 import WarningsSection from "./components/WarningsSection";
 import StorySection from "./components/StorySection";
+import Image from "next/image";
 const QUIZ_STEPS = [
   {
     stepNum: 1,
@@ -23,27 +24,38 @@ const QUIZ_STEPS = [
           引き続き捜査を頼む！
         </p>
 
-        {/* ========================================= */}
-        {/* ★ 追加：探偵EDOSHIからのアドバイス欄 ★ */}
-        {/* ========================================= */}
-        <div className="bg-blue-950/60 border-2 border-blue-500 rounded-xl p-5 sm:p-6 text-left shadow-[0_0_15px_rgba(59,130,246,0.3)] relative mt-4">
-          {/* 左上のちょっとしたアクセント（探偵バッジ風） */}
-          <div className="absolute -top-3 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full border border-blue-400">
-            ADVICE
+        {/* ============================================== */}
+        {/* ★ 修正：探偵EDOSHIのアイコンが食い込むアドバイス欄 ★ */}
+        {/* ============================================== */}
+        {/* アイコンが飛び出す分の余白(mt-10)と、テキストが画像に被らないための左余白(pl-[72px]やpl-[88px])を設定 */}
+        <div className="bg-[#0f172a] border-2 border-blue-500 rounded-xl p-5 pl-[76px] sm:p-6 sm:pl-[96px] text-left shadow-[0_0_15px_rgba(59,130,246,0.3)] relative mt-10">
+          {/* ★ アイコンを absolute で左上に配置 ★ */}
+          {/* bg-[#0f172a] と p-1.5 で背景色と同じフチを作り、親の青い線を自然に隠すトリックを使っています */}
+          <div className="absolute -top-8 -left-3 sm:-top-10 sm:-left-5 bg-[#0f172a] rounded-full p-1.5 z-10">
+            {/* fillを使ってレスポンシブに丸く切り抜き */}
+            <div className="relative w-16 h-16 sm:w-20 sm:h-20">
+              <Image
+                src="/edoshi_icon.jpg" // 保存した画像パス
+                alt="探偵EDOSHIのアイコン"
+                fill
+                className="rounded-full border-[3px] border-blue-400 object-cover shadow-md"
+              />
+            </div>
           </div>
 
-          <h3 className="text-blue-300 font-bold text-lg sm:text-xl mb-3 mt-1 flex items-center tracking-widest">
-            <span className="mr-2 text-2xl">💡</span>
-            探偵EDOSHIからのアドバイス
-          </h3>
+          <div className="w-full">
+            <h3 className="text-blue-200 font-bold text-lg sm:text-xl mb-3 tracking-widest">
+              探偵EDOSHIからのアドバイス
+            </h3>
 
-          <p className="text-sm sm:text-base text-white leading-relaxed font-medium tracking-wide">
-            ここまで君たちが解いた謎は確実にあっている。紙の中ではなく、実際に
-            <span className="text-yellow-300 font-bold">
-              「たんていのぼうしとあたま」の間
-            </span>
-            を探そう！特設ブースから離れる必要はないぞ！俺に手伝えることがあればなんでも言ってくれ！
-          </p>
+            <p className="text-sm sm:text-base text-white leading-relaxed font-medium tracking-wide">
+              ここまで君たちが解いた謎は確実にあっている。紙の中ではなく、実際に
+              <span className="text-yellow-300 font-bold">
+                「たんていのぼうしとあたま」の間
+              </span>
+              を探そう！特設ブースから離れる必要はないぞ！俺に手伝えることがあればなんでも言ってくれ！
+            </p>
+          </div>
         </div>
       </div>
     ),
