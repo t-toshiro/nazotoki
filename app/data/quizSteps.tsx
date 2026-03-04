@@ -50,7 +50,7 @@ export const QUIZ_STEPS = [
           む！
         </p>
 
-        <div className="bg-[#0f172a] border-2 border-blue-500 rounded-xl p-5 pl-[76px] sm:p-6 sm:pl-[96px] text-left shadow-[0_0_15px_rgba(59,130,246,0.3)] relative mt-10">
+        <div className="bg-[#0f172a] border-2 border-blue-500 rounded-xl p-5 sm:p-6 text-left shadow-[0_0_15px_rgba(59,130,246,0.3)] relative mt-10">
           <div className="absolute -top-8 -left-3 sm:-top-10 sm:-left-5 bg-[#0f172a] rounded-full p-1.5 z-10">
             <div className="relative w-16 h-16 sm:w-20 sm:h-20">
               <Image
@@ -63,16 +63,18 @@ export const QUIZ_STEPS = [
           </div>
 
           <div className="w-full">
-            <h3 className="text-blue-200 font-bold text-lg sm:text-xl mb-3 tracking-widest">
+            {/* ★ 修正：タイトルだけを ml-[44px] で右にずらし、アイコンとの被りを防ぐ ★ */}
+            <h3 className="text-blue-200 font-bold text-lg sm:text-xl mb-5 tracking-widest ml-[44px] sm:ml-[56px] leading-relaxed">
               <ruby>
                 探偵<rt>たんてい</rt>
               </ruby>
-              EDOSHIからの
+              EDOSHINからの
               <br className="sm:hidden" />
               アドバイス
             </h3>
 
-            <p className="text-sm sm:text-base text-white leading-relaxed font-medium tracking-wide">
+            {/* ★ 修正：親枠の pl-[76px] を消したので、ここは左端から広く使えるようになります ★ */}
+            <p className="text-sm sm:text-base text-white leading-loose font-medium tracking-wide">
               ここまで
               <ruby>
                 君<rt>きみ</rt>

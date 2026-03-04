@@ -43,9 +43,25 @@ export default function ItemsTable() {
       </ul>
       {/* ルビが被らないように leading-loose に変更 */}
       <p className="mt-6 text-xs sm:text-sm text-yellow-300 font-bold tracking-wide leading-loose text-center">
-        ※<span className="inline-block">足りないものがある場合は</span>
+        ※
+        <span className="inline-block">
+          <ruby>
+            足<rt>た</rt>
+          </ruby>
+          りないものがある
+          <ruby>
+            場合<rt>ばあい</rt>
+          </ruby>
+          は
+        </span>
         <br className="sm:hidden" />
-        <span className="inline-block">スタッフへ声をかけてね</span>
+        <span className="inline-block">
+          スタッフへ
+          <ruby>
+            声<rt>こえ</rt>
+          </ruby>
+          をかけてね
+        </span>
       </p>
     </div>
   );
