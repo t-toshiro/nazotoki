@@ -49,8 +49,8 @@ export default function HintPage() {
 
         {/* ヒントリスト */}
         <div className="space-y-6">
-          {hintData.map((item) => (
-            <HintAccordion item={item} />
+          {hintData.map((item, index) => (
+            <HintAccordion key={index} item={item} />
           ))}
         </div>
       </div>
