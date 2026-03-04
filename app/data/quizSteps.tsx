@@ -22,7 +22,7 @@ export const QUIZ_STEPS = [
           <ruby>
             怪盗<rt>かいとう</rt>
           </ruby>
-          「D」の
+          Dの
           <ruby>
             仕掛<rt>しか</rt>
           </ruby>
@@ -54,8 +54,8 @@ export const QUIZ_STEPS = [
           <div className="absolute -top-8 -left-3 sm:-top-10 sm:-left-5 bg-[#0f172a] rounded-full p-1.5 z-10">
             <div className="relative w-16 h-16 sm:w-20 sm:h-20">
               <Image
-                src="/edoshi_icon.jpg"
-                alt="探偵EDOSHIのアイコン"
+                src="/edoshin_icon.jpg"
+                alt="探偵EDOSHINのアイコン"
                 fill
                 className="rounded-full border-[3px] border-blue-400 object-cover shadow-md"
               />
@@ -192,7 +192,10 @@ export const QUIZ_STEPS = [
           <ruby>
             探偵<rt>たんてい</rt>
           </ruby>
-          アンケートに
+          <ruby>
+            調査<rt>ちょうさ</rt>
+          </ruby>
+          に
           <ruby>
             解答<rt>かいとう</rt>
           </ruby>

@@ -19,14 +19,7 @@ export default function StorySection() {
           <ruby>
             怪盗<rt>かいとう</rt>
           </ruby>
-          Dによって、au・UQモバイルのお
-          <ruby>
-            得<rt>とく</rt>
-          </ruby>
-          <ruby>
-            情報<rt>じょうほう</rt>
-          </ruby>
-          がイオン
+          Dによって、au・UQモバイルのおトクがイオン
           <ruby>
             幕張<rt>まくはり</rt>
           </ruby>

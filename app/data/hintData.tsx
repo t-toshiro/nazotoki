@@ -135,15 +135,15 @@ export const hintData = [
             <ruby>
               親子応援割<rt>おやこおうえんわり</rt>
             </ruby>
-            の
+            30G(
             <ruby>
-              月額料金<rt>げつがくりょうきん</rt>
+              税抜<rt>ぜいぬ</rt>
             </ruby>
-            (
+            )の
             <ruby>
-              税抜<rt>ぜいぬき</rt>
+              価格<rt>かかく</rt>
             </ruby>
-            ) は、 チラシを
+            は、 チラシを
             <ruby>
               確認<rt>かくにん</rt>
             </ruby>
@@ -159,15 +159,15 @@ export const hintData = [
             <ruby>
               親子応援割<rt>おやこおうえんわり</rt>
             </ruby>
-            の
+            30G(
             <ruby>
-              月額料金<rt>げつがくりょうきん</rt>
+              税抜<rt>ぜいぬ</rt>
             </ruby>
-            (
+            )の
             <ruby>
-              税抜<rt>ぜいぬき</rt>
+              価格<rt>かかく</rt>
             </ruby>
-            ) は980(
+            は980(
             <ruby>
               円<rt>えん</rt>
             </ruby>
@@ -260,6 +260,171 @@ export const hintData = [
               答<rt>こた</rt>
             </ruby>
             えは「アンシンフィルター」になる。
+          </>
+        ),
+      },
+    ],
+  },
+  {
+    title: (
+      <>
+        <ruby>
+          右下<rt>みぎした</rt>
+        </ruby>
+        の
+        <ruby>
+          謎<rt>なぞ</rt>
+        </ruby>
+      </>
+    ),
+    hints: [
+      {
+        level: "ヒント",
+        text: (
+          <>
+            UQ mobileのロゴをチラシから
+            <ruby>
+              探<rt>さが</rt>
+            </ruby>
+            すと、ピンクと
+            <ruby>
+              水色<rt>みずいろ</rt>
+            </ruby>
+            の2
+            <ruby>
+              色<rt>しょく</rt>
+            </ruby>
+            が
+            <ruby>
+              使<rt>つか</rt>
+            </ruby>
+            われていることがわかる。ピンクと
+            <ruby>
+              水色<rt>みずいろ</rt>
+            </ruby>
+            の
+            <ruby>
+              文字<rt>もじ</rt>
+            </ruby>
+            を
+            <ruby>
+              左<rt>ひだり</rt>
+            </ruby>
+            から
+            <ruby>
+              読<rt>よ</rt>
+            </ruby>
+            むと「ミドリシタカラ（
+            <ruby>
+              緑<rt>みどり</rt>
+            </ruby>
+            <ruby>
+              下<rt>した</rt>
+            </ruby>
+            から）」となるので、
+            <ruby>
+              次<rt>つぎ</rt>
+            </ruby>
+            は
+            <ruby>
+              緑色<rt>みどりいろ</rt>
+            </ruby>
+            の
+            <ruby>
+              文字<rt>もじ</rt>
+            </ruby>
+            を
+            <ruby>
+              下<rt>した</rt>
+            </ruby>
+            から
+            <ruby>
+              読<rt>よ</rt>
+            </ruby>
+            んでみよう。
+          </>
+        ),
+      },
+      {
+        level: "答え",
+        text: (
+          <>
+            ピンクと
+            <ruby>
+              水色<rt>みずいろ</rt>
+            </ruby>
+            の
+            <ruby>
+              文字<rt>もじ</rt>
+            </ruby>
+            を
+            <ruby>
+              左<rt>ひだり</rt>
+            </ruby>
+            から
+            <ruby>
+              読<rt>よ</rt>
+            </ruby>
+            むと「ミドリシタカラ（
+            <ruby>
+              緑<rt>みどり</rt>
+            </ruby>
+            <ruby>
+              下<rt>した</rt>
+            </ruby>
+            から）」→
+            <ruby>
+              緑<rt>みどり</rt>
+            </ruby>
+            の
+            <ruby>
+              文字<rt>もじ</rt>
+            </ruby>
+            を
+            <ruby>
+              下<rt>した</rt>
+            </ruby>
+            から
+            <ruby>
+              読<rt>よ</rt>
+            </ruby>
+            むと「オレンジミギカラ(オレンジ
+            <ruby>
+              右<rt>みぎ</rt>
+            </ruby>
+            から)」→オレンジ
+            <ruby>
+              色<rt>いろ</rt>
+            </ruby>
+            の
+            <ruby>
+              文字<rt>もじ</rt>
+            </ruby>
+            を
+            <ruby>
+              右<rt>みぎ</rt>
+            </ruby>
+            から
+            <ruby>
+              読<rt>よ</rt>
+            </ruby>
+            むと「コタエハボウハン（
+            <ruby>
+              答<rt>こた</rt>
+            </ruby>
+            えは
+            <ruby>
+              防犯<rt>ぼうはん</rt>
+            </ruby>
+            ）」となるので、この
+            <ruby>
+              謎<rt>なぞ</rt>
+            </ruby>
+            の
+            <ruby>
+              答<rt>こた</rt>
+            </ruby>
+            えは「ボウハン」になる。
           </>
         ),
       },

@@ -3,7 +3,7 @@
 type Props = { step: number; formData: FormData };
 const QUIZ_ANSWERS: Record<number, string[]> = {
   1: ["偽物", "にせもの", "ニセモノ"],
-  2: ["本物", "ほんもの", "ホンモノ"],
+  2: ["情報", "じょうほう", "ジョウホウ"],
 };
 export async function checkAnswer(step: number, formData: FormData) {
   // 入力された文字を取得（前後の空白を自動削除）
