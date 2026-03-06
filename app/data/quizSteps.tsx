@@ -15,7 +15,7 @@ export const QUIZ_STEPS = [
         え
       </>
     ),
-    videoSrc: "/midway.mp4",
+    videoSrc: "/midway2.mp4",
     videoDesc: (
       <div className="space-y-6 w-full">
         <p className="text-center">
@@ -161,7 +161,7 @@ export const QUIZ_STEPS = [
         え
       </>
     ),
-    videoSrc: "/ending.mp4",
+    videoSrc: "/ending2.mp4",
     videoDesc: (
       <>
         <p>
