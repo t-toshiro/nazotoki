@@ -36,8 +36,38 @@ export const hintData = [
             <ruby>
               例題<rt>れいだい</rt>
             </ruby>
-            は、 「ハ行を下フリック」「ア行を上フリック」「サ行を左フリック」、
-            また1つ
+            <ruby>
+              <rt></rt>
+            </ruby>
+            は「ハ
+            <ruby>
+              行<rt>ぎょう</rt>
+            </ruby>
+            を
+            <ruby>
+              上<rt>うえ</rt>
+            </ruby>
+            フリック」「ア
+            <ruby>
+              行<rt>ぎょう</rt>
+            </ruby>
+            を
+            <ruby>
+              上<rt>うえ</rt>
+            </ruby>
+            フリック」「サ
+            <ruby>
+              行<rt>ぎょう</rt>
+            </ruby>
+            を
+            <ruby>
+              左<rt>ひだり</rt>
+            </ruby>
+            フリック」を
+            <ruby>
+              表<rt>あらわ</rt>
+            </ruby>
+            している。また、1つ
             <ruby>
               目<rt>め</rt>
             </ruby>
@@ -69,7 +99,19 @@ export const hintData = [
             <ruby>
               矢印<rt>やじるし</rt>
             </ruby>
-            は 「タ行を右フリック」「カ行の
+            は「タ
+            <ruby>
+              行<rt>ぎょう</rt>
+            </ruby>
+            を
+            <ruby>
+              右<rt>みぎ</rt>
+            </ruby>
+            フリック」「カ
+            <ruby>
+              行<rt>ぎょう</rt>
+            </ruby>
+            の
             <ruby>
               真<rt>ま</rt>
             </ruby>
@@ -77,11 +119,23 @@ export const hintData = [
             <ruby>
               中<rt>なか</rt>
             </ruby>
-            」「ラ行の上フリック」、 また2つ
+            」「ラ
+            <ruby>
+              行<rt>ぎょう</rt>
+            </ruby>
+            の
+            <ruby>
+              上<rt>うえ</rt>
+            </ruby>
+            フリック」を
+            <ruby>
+              表<rt>あらわ</rt>
+            </ruby>
+            している。また、2つ
             <ruby>
               目<rt>め</rt>
             </ruby>
-            の〇
+            の〇には
             <ruby>
               濁点<rt>だくてん</rt>
             </ruby>
@@ -127,7 +181,7 @@ export const hintData = [
             <ruby>
               数字<rt>すうじ</rt>
             </ruby>
-            を、 カタカナに
+            をカタカナに
             <ruby>
               変換<rt>へんかん</rt>
             </ruby>
@@ -143,7 +197,7 @@ export const hintData = [
             <ruby>
               税抜<rt>ぜいぬき</rt>
             </ruby>
-            ) は、 チラシを
+            ) はチラシを
             <ruby>
               確認<rt>かくにん</rt>
             </ruby>
@@ -167,15 +221,15 @@ export const hintData = [
             <ruby>
               税抜<rt>ぜいぬき</rt>
             </ruby>
-            ) は980(
+            ) は980
             <ruby>
               円<rt>えん</rt>
             </ruby>
-            )なので、 「9」「8」「0」をそれぞれ
+            なので「9」「8」「0」をそれぞれ
             <ruby>
               対応表<rt>たいおうひょう</rt>
             </ruby>
-            で カタカナに
+            でカタカナに
             <ruby>
               変換<rt>へんかん</rt>
             </ruby>
@@ -218,8 +272,8 @@ export const hintData = [
             <ruby>
               繋<rt>つな</rt>
             </ruby>
-            いでみよう。 イラストはそれぞれ、
-            「らいおん」「くりこし」「しか」「あたま」「かめら」「まいく」を
+            いでみよう。
+            イラストはそれぞれ「らいおん」「くりこし」「しか」「あたま」「かめら」「まいく」を
             <ruby>
               表<rt>あらわ</rt>
             </ruby>
@@ -518,7 +572,7 @@ export const hintData = [
             <ruby>
               当<rt>あ</rt>
             </ruby>
-            てはめると、 「
+            てはめると「
             <ruby>
               答<rt>こた</rt>
             </ruby>
@@ -699,7 +753,7 @@ export const hintData = [
             <ruby>
               怪盗<rt>かいとう</rt>
             </ruby>
-            は 「このショッピングモール
+            は「このショッピングモール
             <ruby>
               内<rt>ない</rt>
             </ruby>
@@ -715,7 +769,7 @@ export const hintData = [
             <ruby>
               内<rt>ない</rt>
             </ruby>
-            で、
+            で
             <ruby>
               探偵<rt>たんてい</rt>
             </ruby>
@@ -750,7 +804,7 @@ export const hintData = [
             <ruby>
               人<rt>ひと</rt>
             </ruby>
-            に イベントブースで、
+            にイベントブースで
             <ruby>
               会<rt>あ</rt>
             </ruby>
@@ -773,7 +827,7 @@ export const hintData = [
             <ruby>
               先輩探偵<rt>せんぱいたんてい</rt>
             </ruby>
-            は、
+            は
             <ruby>
               探偵<rt>たんてい</rt>
             </ruby>
@@ -793,7 +847,7 @@ export const hintData = [
             <ruby>
               協力<rt>きょうりょく</rt>
             </ruby>
-            してもらって、
+            してもらい、
             <ruby>
               探偵<rt>たんてい</rt>
             </ruby>
@@ -829,7 +883,7 @@ export const hintData = [
             <ruby>
               先輩探偵<rt>せんぱいたんてい</rt>
             </ruby>
-            に、 「
+            に「
             <ruby>
               帽子<rt>ぼうし</rt>
             </ruby>
