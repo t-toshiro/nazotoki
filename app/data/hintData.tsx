@@ -135,15 +135,15 @@ export const hintData = [
             <ruby>
               親子応援割<rt>おやこおうえんわり</rt>
             </ruby>
-            30G(
+            の
             <ruby>
-              税抜<rt>ぜいぬ</rt>
+              月額料金<rt>げつがくりょうきん</rt>
             </ruby>
-            )の
+            (
             <ruby>
-              価格<rt>かかく</rt>
+              税抜<rt>ぜいぬき</rt>
             </ruby>
-            は、 チラシを
+            ) は、 チラシを
             <ruby>
               確認<rt>かくにん</rt>
             </ruby>
@@ -159,15 +159,15 @@ export const hintData = [
             <ruby>
               親子応援割<rt>おやこおうえんわり</rt>
             </ruby>
-            30G(
+            の
             <ruby>
-              税抜<rt>ぜいぬ</rt>
+              月額料金<rt>げつがくりょうきん</rt>
             </ruby>
-            )の
+            (
             <ruby>
-              価格<rt>かかく</rt>
+              税抜<rt>ぜいぬき</rt>
             </ruby>
-            は980(
+            ) は980(
             <ruby>
               円<rt>えん</rt>
             </ruby>
