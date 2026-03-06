@@ -1,6 +1,5 @@
 "use server";
 
-type Props = { step: number; formData: FormData };
 const QUIZ_ANSWERS: Record<number, string[]> = {
   1: ["偽物", "にせもの", "ニセモノ"],
   2: ["情報", "じょうほう", "ジョウホウ"],
@@ -15,6 +14,6 @@ export async function checkAnswer(step: number, formData: FormData) {
     return { status: "success" };
   } else {
     // どちらでもない場合はエラーメッセージを返す
-    return { status: "error", message: "不正解です。もう一度考えてみよう！" };
+    return { status: "incorrect" };
   }
 }

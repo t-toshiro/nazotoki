@@ -18,16 +18,16 @@ export default function AnswerForm({
   isCompleted,
   onSuccess,
 }: Props) {
-  const [message, setMessage] = useState("");
+  const [errorStatus, setErrorStatus] = useState("");
 
   const handleSubmit = async (formData: FormData) => {
-    setMessage("");
+    setErrorStatus("");
     const result = await checkAnswer(step, formData);
 
     if (result.status === "success") {
       onSuccess();
     } else {
-      setMessage(result?.message || "エラーが発生しました");
+      setErrorStatus(result.status);
     }
   };
 
@@ -63,9 +63,19 @@ export default function AnswerForm({
         />
 
         {/* エラーメッセージ（ルビ付き） */}
-        {message && !isCompleted && (
+        {errorStatus === "incorrect" && !isCompleted && (
           <p className="text-pink-500 font-bold text-sm bg-pink-500/10 py-2 px-4 rounded-lg text-center">
-            {message}
+            <ruby>
+              不正解<rt>ふせいかい</rt>
+            </ruby>
+            です。もう
+            <ruby>
+              一度<rt>いちど</rt>
+            </ruby>
+            <ruby>
+              考<rt>かんが</rt>
+            </ruby>
+            えてみよう！
           </p>
         )}
 
