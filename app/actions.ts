@@ -7,6 +7,9 @@ const QUIZ_ANSWERS: Record<number, string[]> = {
 export async function checkAnswer(step: number, formData: FormData) {
   // 入力された文字を取得（前後の空白を自動削除）
   const answer = formData.get("answer")?.toString().trim() || "";
+  if (answer.length > 20) {
+    return { status: "incorrect" };
+  }
   const validAnswer = QUIZ_ANSWERS[step];
 
   if (validAnswer.includes(answer)) {
