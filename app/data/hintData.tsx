@@ -1,4 +1,59 @@
-export const hintData = [
+export const getHintData = (difficulty: string) => {
+  if (difficulty === "hard") {
+    return [];
+  } else {
+    return [];
+  }
+};
+export const NORMAL_HINTS = [
+  {
+    title: (
+      <>
+        <ruby>
+          左<rt>ひだり</rt>
+        </ruby>
+        の
+        <ruby>
+          謎<rt>なぞ</rt>
+        </ruby>
+      </>
+    ),
+    hints: [
+      {
+        level: "ヒント",
+        text: <></>,
+      },
+      {
+        level: "答え",
+        text: <></>,
+      },
+    ],
+  },
+  {
+    title: (
+      <>
+        <ruby>
+          右<rt>みぎ</rt>
+        </ruby>
+        の
+        <ruby>
+          謎<rt>なぞ</rt>
+        </ruby>
+      </>
+    ),
+    hints: [
+      {
+        level: "ヒント",
+        text: <></>,
+      },
+      {
+        level: "答え",
+        text: <></>,
+      },
+    ],
+  },
+];
+export const HARD_HINTS = [
   {
     title: (
       <>
