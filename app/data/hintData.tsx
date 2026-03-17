@@ -1,6 +1,6 @@
 export const getHintData = (difficulty: string) => {
   if (difficulty === "hard") {
-    return [];
+    return HARD_HINTS;
   } else {
     return [];
   }
