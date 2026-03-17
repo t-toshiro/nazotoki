@@ -1,8 +1,7 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
-import HintAccordion from "../components/HintAccordion";
-import { hintData } from "../data/hintData";
+import HintAccordion from "@/app/components/HintAccordion";
+import { hintData } from "@/app/data/hintData";
 
 export default function HintPage() {
   return (

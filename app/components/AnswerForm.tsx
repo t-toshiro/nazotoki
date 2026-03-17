@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { checkAnswer } from "../actions";
+import { checkAnswer, Difficulty } from "@/app/actions";
 
 type Props = {
+  difficulty: Difficulty;
   step: number;
   title: React.ReactNode;
   isActive: boolean;
@@ -12,6 +13,7 @@ type Props = {
 };
 
 export default function AnswerForm({
+  difficulty,
   step,
   title,
   isActive,
@@ -22,7 +24,7 @@ export default function AnswerForm({
 
   const handleSubmit = async (formData: FormData) => {
     setErrorStatus("");
-    const result = await checkAnswer(step, formData);
+    const result = await checkAnswer(difficulty, step, formData);
 
     if (result.status === "success") {
       onSuccess();

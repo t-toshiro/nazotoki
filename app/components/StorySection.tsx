@@ -19,12 +19,9 @@ export default function StorySection() {
           <ruby>
             怪盗<rt>かいとう</rt>
           </ruby>
-          Dによって、au・UQモバイルのおトクがイオン
+          Dによって、au・UQモバイルのおトクがイオンモール
           <ruby>
-            幕張<rt>まくはり</rt>
-          </ruby>
-          <ruby>
-            新都心<rt>しんとしん</rt>
+            春日部<rt>かすかべ</rt>
           </ruby>
           の
           <ruby>

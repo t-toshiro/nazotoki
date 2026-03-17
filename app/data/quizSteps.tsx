@@ -1,6 +1,15 @@
 import Image from "next/image";
+import { Difficulty } from "@/app/actions";
 
-export const QUIZ_STEPS = [
+export interface QuizStep {
+  stepNum: number;
+  formTitle: React.ReactNode;
+  videoSrc: string;
+  videoDesc: React.ReactNode;
+  isEnding: boolean;
+}
+
+const HARD_QUIZ_STEPS: QuizStep[] = [
   {
     stepNum: 1,
     formTitle: (
@@ -63,7 +72,6 @@ export const QUIZ_STEPS = [
           </div>
 
           <div className="w-full">
-            {/* ★ 修正：タイトルだけを ml-[44px] で右にずらし、アイコンとの被りを防ぐ ★ */}
             <h3 className="text-blue-200 font-bold text-lg sm:text-xl mb-5 tracking-widest ml-[44px] sm:ml-[56px] leading-relaxed">
               <ruby>
                 探偵<rt>たんてい</rt>
@@ -73,7 +81,6 @@ export const QUIZ_STEPS = [
               アドバイス
             </h3>
 
-            {/* ★ 修正：親枠の pl-[76px] を消したので、ここは左端から広く使えるようになります ★ */}
             <p className="text-sm sm:text-base text-white leading-loose font-medium tracking-wide">
               ここまで
               <ruby>
@@ -219,3 +226,84 @@ export const QUIZ_STEPS = [
     isEnding: true,
   },
 ];
+
+const NORMAL_QUIZ_STEPS: QuizStep[] = [
+  {
+    stepNum: 1,
+    formTitle: (
+      <>
+        <ruby>
+          最後<rt>さいご</rt>
+        </ruby>
+        の
+        <ruby>
+          答<rt>こた</rt>
+        </ruby>
+        え
+      </>
+    ),
+    videoSrc: "/ending2.mp4",
+    videoDesc: (
+      <>
+        <p>
+          <ruby>
+            協力<rt>きょうりょく</rt>
+          </ruby>
+          ありがとう！
+        </p>
+        <p>
+          <ruby>
+            君<rt>きみ</rt>
+          </ruby>
+          たちの
+          <ruby>
+            謎解<rt>なぞと</rt>
+          </ruby>
+          き
+          <ruby>
+            力<rt>りょく</rt>
+          </ruby>
+          は「ホンモノ」だ！
+        </p>
+        <p>
+          <ruby>
+            最後<rt>さいご</rt>
+          </ruby>
+          に
+          <ruby>
+            探偵<rt>たんてい</rt>
+          </ruby>
+          <ruby>
+            調査<rt>ちょうさ</rt>
+          </ruby>
+          に
+          <ruby>
+            解答<rt>かいとう</rt>
+          </ruby>
+          して
+          <br />
+          <ruby>
+            認定証<rt>にんていしょう</rt>
+          </ruby>
+          を
+          <ruby>
+            受<rt>う</rt>
+          </ruby>
+          け
+          <ruby>
+            取<rt>と</rt>
+          </ruby>
+          ってくれ！
+        </p>
+      </>
+    ),
+    isEnding: true,
+  },
+];
+
+export const getQuizSteps = (difficulty: Difficulty): QuizStep[] => {
+  if (difficulty === "hard") {
+    return HARD_QUIZ_STEPS;
+  }
+  return NORMAL_QUIZ_STEPS;
+};
