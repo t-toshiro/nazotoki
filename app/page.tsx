@@ -39,13 +39,9 @@ export default function Home() {
                 className="group relative bg-white border-4 border-blue-400 p-8 rounded-2xl shadow-[0_10px_20px_rgba(0,0,0,0.2)] transition-all hover:-translate-y-1 active:scale-95"
               >
                 <span className="text-blue-600 text-3xl font-black tracking-widest block mb-2">
-                  <ruby>
-                    初級<rt>しょきゅう</rt>
-                  </ruby>
-                </span>
-                <span className="text-blue-400 text-lg font-bold block mb-4">
                   ノーマル
                 </span>
+
                 <p className="text-gray-600 text-sm font-bold leading-relaxed">
                   はじめて
                   <ruby>
@@ -67,13 +63,9 @@ export default function Home() {
                 className="group relative bg-black/90 border-4 border-pink-500 p-8 rounded-2xl shadow-[0_10px_20px_rgba(0,0,0,0.2)] transition-all hover:-translate-y-1 active:scale-95"
               >
                 <span className="text-pink-500 text-3xl font-black tracking-widest block mb-2">
-                  <ruby>
-                    上級<rt>じょうきゅう</rt>
-                  </ruby>
-                </span>
-                <span className="text-white text-lg font-bold block mb-4">
                   ハード
                 </span>
+
                 <p className="text-gray-300 text-sm font-bold leading-relaxed">
                   <ruby>
                     謎解<rt>なぞと</rt>
