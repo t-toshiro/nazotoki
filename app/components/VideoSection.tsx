@@ -4,7 +4,7 @@
 import { ReactNode } from "react";
 
 type Props = {
-  src: string;
+  src?: string;
   description: ReactNode; // JSX（HTMLタグ）も受け取れるようにする
   isEnding?: boolean; // エンディングかどうかの判定（?は省略可能という意味）
 };
@@ -23,14 +23,16 @@ export default function VideoSection({ src, description, isEnding }: Props) {
     <div
       className={`bg-black/90 border-2 ${borderColor} rounded-2xl p-6 sm:p-8 ${shadowColor} text-center`}
     >
-      <div
-        className={`w-full aspect-video rounded-lg overflow-hidden border ${borderColor}/30`}
-      >
-        <video controls className="w-full h-full object-cover bg-gray-900">
-          <source src={src} type="video/mp4" />
-          お使いのブラウザは動画の再生に対応していません。
-        </video>
-      </div>
+      {src && (
+        <div
+          className={`w-full aspect-video rounded-lg overflow-hidden border ${borderColor}/30`}
+        >
+          <video controls className="w-full h-full object-cover bg-gray-900">
+            <source src={src} type="video/mp4" />
+            お使いのブラウザは動画の再生に対応していません。
+          </video>
+        </div>
+      )}
       <div className="mt-6 space-y-3 text-white font-bold tracking-wider text-sm sm:text-base leading-relaxed">
         {description}
       </div>

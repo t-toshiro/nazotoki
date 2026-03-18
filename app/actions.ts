@@ -8,14 +8,14 @@ const QUIZ_ANSWERS: Record<Difficulty, Record<number, string[]>> = {
     2: ["情報", "じょうほう", "ジョウホウ"],
   },
   normal: {
-    1: ["情報", "じょうほう", "ジョウホウ"],
+    1: ["親子でお得", "おやこでおとく", "オヤコデオトク", "親子でおトク"],
   },
 };
 
 export async function checkAnswer(
   difficulty: Difficulty,
   step: number,
-  formData: FormData
+  formData: FormData,
 ) {
   // 入力された文字を取得（前後の空白を自動削除）
   const answer = formData.get("answer")?.toString().trim() || "";

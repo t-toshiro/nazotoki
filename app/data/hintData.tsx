@@ -2,10 +2,10 @@ export const getHintData = (difficulty: string) => {
   if (difficulty === "hard") {
     return HARD_HINTS;
   } else {
-    return [];
+    return NORMAL_HINTS;
   }
 };
-export const NORMAL_HINTS = [
+const NORMAL_HINTS = [
   {
     title: (
       <>
@@ -21,11 +21,127 @@ export const NORMAL_HINTS = [
     hints: [
       {
         level: "ヒント",
-        text: <></>,
+        text: (
+          <>
+            ホンモノと
+            <ruby>
+              書<rt>か</rt>
+            </ruby>
+            いてあるロゴと
+            <ruby>
+              見比<rt>みくら</rt>
+            </ruby>
+            べて、
+            <ruby>
+              間違<rt>まちが</rt>
+            </ruby>
+            い
+            <ruby>
+              探<rt>さが</rt>
+            </ruby>
+            しもしてみよう。
+            <ruby>
+              色<rt>いろ</rt>
+            </ruby>
+            が
+            <ruby>
+              違<rt>ちが</rt>
+            </ruby>
+            うロゴや、
+            <ruby>
+              反転<rt>はんてん</rt>
+            </ruby>
+            しているロゴが
+            <ruby>
+              紛<rt>まぎ</rt>
+            </ruby>
+            れているみたいだ。
+          </>
+        ),
       },
       {
         level: "答え",
-        text: <></>,
+        text: (
+          <>
+            ホンモノと
+            <ruby>
+              同<rt>おな</rt>
+            </ruby>
+            じロゴは、「
+            <ruby>
+              上<rt>うえ</rt>
+            </ruby>
+            の
+            <ruby>
+              列<rt>れつ</rt>
+            </ruby>
+            の
+            <ruby>
+              左<rt>ひだり</rt>
+            </ruby>
+            、
+            <ruby>
+              真<rt>ま</rt>
+            </ruby>
+            ん
+            <ruby>
+              中<rt>なか</rt>
+            </ruby>
+            の
+            <ruby>
+              列<rt>れつ</rt>
+            </ruby>
+            の
+            <ruby>
+              中央<rt>ちゅうおう</rt>
+            </ruby>
+            、
+            <ruby>
+              真<rt>ま</rt>
+            </ruby>
+            ん
+            <ruby>
+              中<rt>なか</rt>
+            </ruby>
+            の
+            <ruby>
+              列<rt>れつ</rt>
+            </ruby>
+            の
+            <ruby>
+              右<rt>みぎ</rt>
+            </ruby>
+            、
+            <ruby>
+              下<rt>した</rt>
+            </ruby>
+            の
+            <ruby>
+              列<rt>れつ</rt>
+            </ruby>
+            の
+            <ruby>
+              右<rt>みぎ</rt>
+            </ruby>
+            」。この４つの
+            <ruby>
+              上<rt>うえ</rt>
+            </ruby>
+            にあるひらがなを
+            <ruby>
+              並<rt>なら</rt>
+            </ruby>
+            び
+            <ruby>
+              替<rt>か</rt>
+            </ruby>
+            えると、
+            <ruby>
+              答<rt>こた</rt>
+            </ruby>
+            えは「やきにく」。
+          </>
+        ),
       },
     ],
   },
@@ -44,16 +160,275 @@ export const NORMAL_HINTS = [
     hints: [
       {
         level: "ヒント",
-        text: <></>,
+        text: (
+          <>
+            <ruby>
+              表<rt>ひょう</rt>
+            </ruby>
+            の
+            <ruby>
+              中<rt>なか</rt>
+            </ruby>
+            に
+            <ruby>
+              書<rt>か</rt>
+            </ruby>
+            かれている「す、ま、ほ」の
+            <ruby>
+              位置<rt>いち</rt>
+            </ruby>
+            と
+            <ruby>
+              見覚<rt>みおぼ</rt>
+            </ruby>
+            えのある
+            <ruby>
+              表<rt>ひょう</rt>
+            </ruby>
+            、これらをふまえるとこの
+            <ruby>
+              表<rt>ひょう</rt>
+            </ruby>
+            は
+            <ruby>
+              五十音表<rt>ごじゅうおんひょう</rt>
+            </ruby>
+            を
+            <ruby>
+              表<rt>あらわ</rt>
+            </ruby>
+            しているようだ。
+          </>
+        ),
       },
       {
         level: "答え",
-        text: <></>,
+        text: (
+          <>
+            <ruby>
+              五十音表<rt>ごじゅうおんひょう</rt>
+            </ruby>
+            で
+            <ruby>
+              考<rt>かんが</rt>
+            </ruby>
+            えると「⭐＝お、♡＝と、♢＝こ」になるので、
+            <ruby>
+              答<rt>こた</rt>
+            </ruby>
+            えは「おとこ」。
+          </>
+        ),
+      },
+    ],
+  },
+  {
+    title: (
+      <>
+        Webに
+        <ruby>
+          答<rt>こた</rt>
+        </ruby>
+        えを
+        <ruby>
+          入力<rt>にゅうりょく</rt>
+        </ruby>
+        した
+        <ruby>
+          後<rt>あと</rt>
+        </ruby>
+      </>
+    ),
+    hints: [
+      {
+        level: "ヒント１",
+        text: (
+          <>
+            <ruby>
+              怪盗<rt>かいとう</rt>
+            </ruby>
+            は「このショッピングモール
+            <ruby>
+              内<rt>ない</rt>
+            </ruby>
+            に
+            <ruby>
+              隠<rt>かく</rt>
+            </ruby>
+            した」と
+            <ruby>
+              言<rt>い</rt>
+            </ruby>
+            っている。 このショッピングモール
+            <ruby>
+              内<rt>ない</rt>
+            </ruby>
+            で
+            <ruby>
+              探偵<rt>たんてい</rt>
+            </ruby>
+            の
+            <ruby>
+              帽子<rt>ぼうし</rt>
+            </ruby>
+            を
+            <ruby>
+              見<rt>み</rt>
+            </ruby>
+            なかっただろうか。
+          </>
+        ),
+      },
+      {
+        level: "ヒント２",
+        text: (
+          <>
+            <ruby>
+              探偵<rt>たんてい</rt>
+            </ruby>
+            の
+            <ruby>
+              帽子<rt>ぼうし</rt>
+            </ruby>
+            を
+            <ruby>
+              被<rt>かぶ</rt>
+            </ruby>
+            っている
+            <ruby>
+              人<rt>ひと</rt>
+            </ruby>
+            にイベントブースで
+            <ruby>
+              会<rt>あ</rt>
+            </ruby>
+            っているはずだ。
+          </>
+        ),
+      },
+      {
+        level: "ヒント３",
+        text: (
+          <>
+            <ruby>
+              最初<rt>さいしょ</rt>
+            </ruby>
+            に
+            <ruby>
+              話<rt>はな</rt>
+            </ruby>
+            した
+            <ruby>
+              先輩探偵<rt>せんぱいたんてい</rt>
+            </ruby>
+            は
+            <ruby>
+              探偵<rt>たんてい</rt>
+            </ruby>
+            の
+            <ruby>
+              帽子<rt>ぼうし</rt>
+            </ruby>
+            を
+            <ruby>
+              被<rt>かぶ</rt>
+            </ruby>
+            っている。
+            <ruby>
+              先輩探偵<rt>せんぱいたんてい</rt>
+            </ruby>
+            に
+            <ruby>
+              協力<rt>きょうりょく</rt>
+            </ruby>
+            してもらい、
+            <ruby>
+              探偵<rt>たんてい</rt>
+            </ruby>
+            の
+            <ruby>
+              帽子<rt>ぼうし</rt>
+            </ruby>
+            と
+            <ruby>
+              頭<rt>あたま</rt>
+            </ruby>
+            の
+            <ruby>
+              間<rt>あいだ</rt>
+            </ruby>
+            を
+            <ruby>
+              見<rt>み</rt>
+            </ruby>
+            ることは
+            <ruby>
+              出来<rt>でき</rt>
+            </ruby>
+            ないだろうか。
+          </>
+        ),
+      },
+      {
+        level: "答え",
+        text: (
+          <>
+            イベントブースにいる
+            <ruby>
+              先輩探偵<rt>せんぱいたんてい</rt>
+            </ruby>
+            に「
+            <ruby>
+              帽子<rt>ぼうし</rt>
+            </ruby>
+            の
+            <ruby>
+              中<rt>なか</rt>
+            </ruby>
+            を
+            <ruby>
+              見<rt>み</rt>
+            </ruby>
+            せてほしい」と
+            <ruby>
+              伝<rt>つた</rt>
+            </ruby>
+            えると、
+            <ruby>
+              帽子<rt>ぼうし</rt>
+            </ruby>
+            をとって
+            <ruby>
+              中<rt>なか</rt>
+            </ruby>
+            を
+            <ruby>
+              見<rt>み</rt>
+            </ruby>
+            せてくれる。
+            <ruby>
+              実際<rt>じっさい</rt>
+            </ruby>
+            にイベントブースへ
+            <ruby>
+              行<rt>い</rt>
+            </ruby>
+            き、
+            <ruby>
+              先輩探偵<rt>せんぱいたんてい</rt>
+            </ruby>
+            に
+            <ruby>
+              話<rt>はな</rt>
+            </ruby>
+            しかけてみよう。
+          </>
+        ),
       },
     ],
   },
 ];
-export const HARD_HINTS = [
+const HARD_HINTS = [
   {
     title: (
       <>

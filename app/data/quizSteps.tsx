@@ -1,13 +1,13 @@
 import Image from "next/image";
 import { Difficulty } from "@/app/actions";
 
-export interface QuizStep {
+export type QuizStep = {
   stepNum: number;
   formTitle: React.ReactNode;
-  videoSrc: string;
+  videoSrc?: string;
   videoDesc: React.ReactNode;
   isEnding: boolean;
-}
+};
 
 const HARD_QUIZ_STEPS: QuizStep[] = [
   {
@@ -234,6 +234,186 @@ const NORMAL_QUIZ_STEPS: QuizStep[] = [
       <>
         <ruby>
           最後<rt>さいご</rt>
+        </ruby>
+        の
+        <ruby>
+          答<rt>こた</rt>
+        </ruby>
+        え
+      </>
+    ),
+
+    videoDesc: (
+      <div className="space-y-6 w-full">
+        <div className="bg-[#0f172a] border-2 border-blue-500 rounded-xl p-5 sm:p-6 text-left shadow-[0_0_15px_rgba(59,130,246,0.3)] relative mt-10">
+          <div className="absolute -top-8 -left-3 sm:-top-10 sm:-left-5 bg-[#0f172a] rounded-full p-1.5 z-10">
+            <div className="relative w-16 h-16 sm:w-20 sm:h-20">
+              <Image
+                src="/kaito_icon.jpg"
+                alt="怪盗Dのアイコン"
+                fill
+                className="rounded-full border-[3px] border-blue-400 object-cover shadow-md"
+              />
+            </div>
+          </div>
+
+          <div className="w-full">
+            <h3 className="text-blue-200 font-bold text-lg sm:text-xl mb-5 tracking-widest ml-[44px] sm:ml-[56px] leading-relaxed">
+              <ruby>
+                怪盗<rt>かいとう</rt>
+              </ruby>
+              Dからの
+              <br className="sm:hidden" />
+              メッセージ
+            </h3>
+
+            <p className="text-sm sm:text-base text-white leading-loose font-medium tracking-wide">
+              <>
+                ハッハッハ！…
+                <ruby>
+                  正解<rt>せいかい</rt>
+                </ruby>
+                だ。 やるじゃないか。 だが、まだ
+                <ruby>
+                  終<rt>お</rt>
+                </ruby>
+                わりじゃない。 ここからが
+                <ruby>
+                  本当<rt>ほんとう</rt>
+                </ruby>
+                の
+                <ruby>
+                  勝負<rt>しょうぶ</rt>
+                </ruby>
+                だ。 おトクは“
+                <ruby>
+                  探偵<rt>たんてい</rt>
+                </ruby>
+                の
+                <ruby>
+                  帽子<rt>ぼうし</rt>
+                </ruby>
+                と
+                <ruby>
+                  頭<rt>あたま</rt>
+                </ruby>
+                のあいだ”に
+                <ruby>
+                  隠<rt>かく</rt>
+                </ruby>
+                した。 さぁ、
+                <ruby>
+                  君達<rt>きみたち</rt>
+                </ruby>
+                は
+                <ruby>
+                  見<rt>み</rt>
+                </ruby>
+                つけられるかな？
+              </>
+            </p>
+          </div>
+        </div>
+        <div className="bg-[#0f172a] border-2 border-blue-500 rounded-xl p-5 sm:p-6 text-left shadow-[0_0_15px_rgba(59,130,246,0.3)] relative mt-10">
+          <div className="absolute -top-8 -left-3 sm:-top-10 sm:-left-5 bg-[#0f172a] rounded-full p-1.5 z-10">
+            <div className="relative w-16 h-16 sm:w-20 sm:h-20">
+              <Image
+                src="/edoshin_icon.jpg"
+                alt="探偵EDOSHINのアイコン"
+                fill
+                className="rounded-full border-[3px] border-blue-400 object-cover shadow-md"
+              />
+            </div>
+          </div>
+          <div className="w-full">
+            <h3 className="text-blue-200 font-bold text-lg sm:text-xl mb-5 tracking-widest ml-[44px] sm:ml-[56px] leading-relaxed">
+              <ruby>
+                探偵<rt>たんてい</rt>
+              </ruby>
+              EDOSHINからの
+              <br className="sm:hidden" />
+              アドバイス
+            </h3>
+
+            <p className="text-sm sm:text-base text-white leading-loose font-medium tracking-wide">
+              ここまで
+              <ruby>
+                君<rt>きみ</rt>
+              </ruby>
+              たちが
+              <ruby>
+                解<rt>と</rt>
+              </ruby>
+              いた
+              <ruby>
+                謎<rt>なぞ</rt>
+              </ruby>
+              は
+              <ruby>
+                確実<rt>かくじつ</rt>
+              </ruby>
+              にあっている。
+              <ruby>
+                紙<rt>かみ</rt>
+              </ruby>
+              の
+              <ruby>
+                中<rt>なか</rt>
+              </ruby>
+              ではなく、
+              <ruby>
+                実際<rt>じっさい</rt>
+              </ruby>
+              に
+              <span className="text-yellow-300 font-bold">
+                「たんていのぼうしとあたま」
+              </span>
+              の
+              <ruby>
+                間<rt>あいだ</rt>
+              </ruby>
+              を
+              <ruby>
+                探<rt>さが</rt>
+              </ruby>
+              そう！
+              <ruby>
+                特設<rt>とくせつ</rt>
+              </ruby>
+              ブースから
+              <ruby>
+                離<rt>はな</rt>
+              </ruby>
+              れる
+              <ruby>
+                必要<rt>ひつよう</rt>
+              </ruby>
+              はないぞ！
+              <ruby>
+                俺<rt>おれ</rt>
+              </ruby>
+              に
+              <ruby>
+                手伝<rt>てつだ</rt>
+              </ruby>
+              えることがあれば なんでも
+              <ruby>
+                言<rt>い</rt>
+              </ruby>
+              ってくれ！
+            </p>
+          </div>
+        </div>
+      </div>
+    ),
+    isEnding: false,
+  },
+  {
+    stepNum: 2,
+    formTitle: (
+      <>
+        <ruby>
+          本当<rt>ほんとう</rt>
         </ruby>
         の
         <ruby>
