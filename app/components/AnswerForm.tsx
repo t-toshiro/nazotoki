@@ -50,7 +50,7 @@ export default function AnswerForm({
           <ruby>
             入力<rt>にゅうりょく</rt>
           </ruby>
-          してください
+          しよう
         </label>
 
         <input

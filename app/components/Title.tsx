@@ -76,7 +76,7 @@ export default function Title() {
           <ruby>
             誠<rt>まこと</rt>
           </ruby>
-          にありがとうございます
+          にありがとうございます！
         </p>
       </div>
     </>

@@ -171,13 +171,12 @@ const HARD_QUIZ_STEPS: QuizStep[] = [
     videoSrc: "/ending2.mp4",
     videoDesc: (
       <>
-        <p>
+        <p className="leading-loose">
           <ruby>
             協力<rt>きょうりょく</rt>
           </ruby>
           ありがとう！
-        </p>
-        <p>
+          <br className="sm:hidden" />
           <ruby>
             君<rt>きみ</rt>
           </ruby>
@@ -189,9 +188,8 @@ const HARD_QUIZ_STEPS: QuizStep[] = [
           <ruby>
             力<rt>りょく</rt>
           </ruby>
-          は「ホンモノ」だ！
-        </p>
-        <p>
+          は 「ホンモノ」だ！
+          <br className="sm:hidden" />
           <ruby>
             最後<rt>さいご</rt>
           </ruby>
@@ -246,7 +244,7 @@ const NORMAL_QUIZ_STEPS: QuizStep[] = [
     videoDesc: (
       <div className="space-y-6 w-full">
         <div className="bg-[#0f172a] border-2 border-pink-600 rounded-xl p-5 sm:p-6 text-left shadow-[0_0_15px_rgba(59,130,246,0.3)] relative mt-10">
-          <div className="absolute -top-8 -right-3 sm:-top-10 sm:-left-5 bg-[#0f172a] rounded-full p-1.5 z-10">
+          <div className="absolute -top-8 -right-3 sm:-top-10 sm:-right-5 bg-[#0f172a] rounded-full p-1.5 z-10">
             <div className="relative w-16 h-16 sm:w-20 sm:h-20">
               <Image
                 src="/kaito_icon.jpg"
@@ -315,7 +313,7 @@ const NORMAL_QUIZ_STEPS: QuizStep[] = [
                 <ruby>
                   見<rt>み</rt>
                 </ruby>
-                つけられるかな？
+                つけられるかな！？
               </>
             </p>
           </div>
