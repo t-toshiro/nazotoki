@@ -10,6 +10,7 @@ export default function WarningsSection() {
       {/* ルビが被らないよう leading-loose に変更し、項目間の余白を space-y-6 に広げました */}
       <ul className="space-y-6 text-sm sm:text-base md:text-lg text-white font-medium leading-loose tracking-wide">
         <li className="flex items-start">
+          <span className="mr-3 text-pink-500 shrink-0">●</span>
           <span>
             <ruby>
               遊<rt>あそ</rt>
@@ -34,6 +35,7 @@ export default function WarningsSection() {
           </span>
         </li>
         <li className="flex items-start">
+          <span className="mr-3 text-pink-500 shrink-0">●</span>
           <span>
             ショッピングモールの
             <ruby>
@@ -51,6 +53,7 @@ export default function WarningsSection() {
           </span>
         </li>
         <li className="flex items-start">
+          <span className="mr-3 text-pink-500 shrink-0">●</span>
           <span>
             <ruby>
               謎<rt>なぞ</rt>
@@ -99,6 +102,7 @@ export default function WarningsSection() {
           </span>
         </li>
         <li className="flex items-start">
+          <span className="mr-3 text-pink-500 shrink-0">●</span>
           <span>
             <ruby>
               謎<rt>なぞ</rt>

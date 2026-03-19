@@ -39,7 +39,7 @@ const NORMAL_HINTS = [
             <ruby>
               探<rt>さが</rt>
             </ruby>
-            しもしてみよう。
+            しをしよう。
             <ruby>
               色<rt>いろ</rt>
             </ruby>
@@ -47,7 +47,7 @@ const NORMAL_HINTS = [
             <ruby>
               違<rt>ちが</rt>
             </ruby>
-            うロゴや、
+            うロゴや
             <ruby>
               反転<rt>はんてん</rt>
             </ruby>
@@ -67,7 +67,7 @@ const NORMAL_HINTS = [
             <ruby>
               同<rt>おな</rt>
             </ruby>
-            じロゴは、「
+            じロゴは「
             <ruby>
               上<rt>うえ</rt>
             </ruby>
@@ -177,15 +177,7 @@ const NORMAL_HINTS = [
             <ruby>
               位置<rt>いち</rt>
             </ruby>
-            と
-            <ruby>
-              見覚<rt>みおぼ</rt>
-            </ruby>
-            えのある
-            <ruby>
-              表<rt>ひょう</rt>
-            </ruby>
-            、これらをふまえるとこの
+            とスマホの位置と表の形を踏まえると、この
             <ruby>
               表<rt>ひょう</rt>
             </ruby>
@@ -208,11 +200,8 @@ const NORMAL_HINTS = [
             <ruby>
               五十音表<rt>ごじゅうおんひょう</rt>
             </ruby>
-            で
-            <ruby>
-              考<rt>かんが</rt>
-            </ruby>
-            えると「⭐＝お、♡＝と、♢＝こ」になるので、
+            で<ruby>三つの図形の位置に当てはまる文字を考えると</ruby>
+            「☆＝お、♡＝と、♢＝こ」になるので、
             <ruby>
               答<rt>こた</rt>
             </ruby>
@@ -259,7 +248,7 @@ const NORMAL_HINTS = [
             <ruby>
               言<rt>い</rt>
             </ruby>
-            っている。 このショッピングモール
+            っていた。 このショッピングモール
             <ruby>
               内<rt>ない</rt>
             </ruby>

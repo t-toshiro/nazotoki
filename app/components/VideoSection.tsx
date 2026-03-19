@@ -11,7 +11,7 @@ type Props = {
 
 export default function VideoSection({ src, description, isEnding }: Props) {
   // エンディングかどうかで枠線の色や影、タイトルの大きさを変える
-  const borderColor = isEnding ? "border-yellow-400" : "border-orange-500";
+  const borderColor = isEnding ? "border-yellow-400" : "border-pink-500";
   const shadowColor = isEnding
     ? "shadow-[0_0_20px_rgba(250,204,21,0.4)]"
     : "shadow-[0_0_20px_rgba(249,115,22,0.4)]";

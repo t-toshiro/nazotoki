@@ -20,22 +20,41 @@ export default function Home({
   const QUIZ_STEPS = getQuizSteps(currentDifficulty);
 
   const [step, setStep] = useState<number>(1);
+  const [isInitialized, setIsInitialized] = useState(false);
 
+  // 1. 初回読み込み時にLocalStorageから進捗を復元
   useEffect(() => {
-    if (step > 1) {
+    const savedStep = localStorage.getItem(`nazotoki_step_${currentDifficulty}`);
+    if (savedStep) {
+      const parsedStep = parseInt(savedStep, 10);
+      if (!isNaN(parsedStep)) {
+        setStep(parsedStep);
+      }
+    }
+    setIsInitialized(true);
+  }, [currentDifficulty]);
+
+  // 2. ステップが更新されるたびにLocalStorageに保存
+  useEffect(() => {
+    if (isInitialized) {
+      localStorage.setItem(`nazotoki_step_${currentDifficulty}`, step.toString());
+    }
+  }, [step, currentDifficulty, isInitialized]);
+
+  // スクロール制御
+  useEffect(() => {
+    if (step > 1 && isInitialized) {
       setTimeout(() => {
         const videoEl = document.getElementById(`video-step-${step - 1}`);
         videoEl?.scrollIntoView({ behavior: "smooth", block: "center" });
       }, 100);
     }
-  }, [step]);
+  }, [step, isInitialized]);
 
   return (
     <div className="min-h-screen bg-[#3EBFFB] text-white font-sans relative pb-24 overflow-x-hidden selection:bg-pink-500">
-      {/* ページ上部の余白と、必要であれば戻るボタンを配置できるエリア */}
       <div className="relative z-10 pt-16 pb-10">
         <div className="flex flex-col items-center justify-center px-4 sm:px-6 space-y-12 text-center max-w-2xl mx-auto">
-          {/* 戻るボタン（任意ですが、上部に余白を作るついでに追加すると親切です） */}
           <Link
             href="/"
             className="mb-4 bg-black/20 hover:bg-black/40 text-white/80 text-xs font-bold py-2 px-4 rounded-full border border-white/20 transition-all"

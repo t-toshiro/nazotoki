@@ -19,7 +19,9 @@ export default function StorySection() {
           <ruby>
             怪盗<rt>かいとう</rt>
           </ruby>
-          Dによって、au・UQモバイルのおトクがイオンモール
+          Dによって、au・UQモバイルの
+          <br className="sm:hidden" />
+          おトクがイオンモール
           <ruby>
             春日部<rt>かすかべ</rt>
           </ruby>
@@ -28,6 +30,7 @@ export default function StorySection() {
             中<rt>なか</rt>
           </ruby>
           に
+          <br className="sm:hidden" />
           <ruby>
             隠<rt>かく</rt>
           </ruby>
@@ -77,21 +80,20 @@ export default function StorySection() {
             明<rt>あ</rt>
           </ruby>
           かし、
-        </p>
-        {/* ↓ whitespace-nowrap（改行禁止）を追加し、スマホ用に文字サイズを微調整。ルビ用に mt-8 を mt-10 に広げました */}
-        <p className="whitespace-nowrap text-[15px] sm:text-xl text-yellow-300 text-center mt-10 drop-shadow-[0_0_8px_rgba(250,204,21,0.6)]">
-          <ruby>
-            見事<rt>みごと</rt>
-          </ruby>
-          「おトク」を
-          <ruby>
-            見<rt>み</rt>
-          </ruby>
-          つけ
-          <ruby>
-            出<rt>だ</rt>
-          </ruby>
-          すことができるか！？
+          <span className="whitespace-nowrap text-[15px] sm:text-xl text-yellow-300 text-center mt-10 drop-shadow-[0_0_8px_rgba(250,204,21,0.6)]">
+            <ruby>
+              見事<rt>みごと</rt>
+            </ruby>
+            「おトク」を
+            <ruby>
+              見<rt>み</rt>
+            </ruby>
+            つけ
+            <ruby>
+              出<rt>だ</rt>
+            </ruby>
+            すことができるか！？
+          </span>
         </p>
       </div>
     </div>

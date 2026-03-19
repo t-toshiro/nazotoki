@@ -245,26 +245,24 @@ const NORMAL_QUIZ_STEPS: QuizStep[] = [
 
     videoDesc: (
       <div className="space-y-6 w-full">
-        <div className="bg-[#0f172a] border-2 border-blue-500 rounded-xl p-5 sm:p-6 text-left shadow-[0_0_15px_rgba(59,130,246,0.3)] relative mt-10">
-          <div className="absolute -top-8 -left-3 sm:-top-10 sm:-left-5 bg-[#0f172a] rounded-full p-1.5 z-10">
+        <div className="bg-[#0f172a] border-2 border-pink-600 rounded-xl p-5 sm:p-6 text-left shadow-[0_0_15px_rgba(59,130,246,0.3)] relative mt-10">
+          <div className="absolute -top-8 -right-3 sm:-top-10 sm:-left-5 bg-[#0f172a] rounded-full p-1.5 z-10">
             <div className="relative w-16 h-16 sm:w-20 sm:h-20">
               <Image
                 src="/kaito_icon.jpg"
                 alt="怪盗Dのアイコン"
                 fill
-                className="rounded-full border-[3px] border-blue-400 object-cover shadow-md"
+                className="rounded-full border-[3px] border-pink-600 object-cover shadow-md"
               />
             </div>
           </div>
 
           <div className="w-full">
-            <h3 className="text-blue-200 font-bold text-lg sm:text-xl mb-5 tracking-widest ml-[44px] sm:ml-[56px] leading-relaxed">
+            <h3 className="text-pink-600 font-bold text-lg sm:text-xl mb-5 tracking-widest mr-[44px] sm:mr-[56px] leading-relaxed">
               <ruby>
                 怪盗<rt>かいとう</rt>
               </ruby>
-              Dからの
-              <br className="sm:hidden" />
-              メッセージ
+              Dからのメッセージ
             </h3>
 
             <p className="text-sm sm:text-base text-white leading-loose font-medium tracking-wide">
@@ -273,7 +271,7 @@ const NORMAL_QUIZ_STEPS: QuizStep[] = [
                 <ruby>
                   正解<rt>せいかい</rt>
                 </ruby>
-                だ。 やるじゃないか。 だが、まだ
+                だ。やるじゃないか。だが、まだ
                 <ruby>
                   終<rt>お</rt>
                 </ruby>
@@ -285,23 +283,31 @@ const NORMAL_QUIZ_STEPS: QuizStep[] = [
                 <ruby>
                   勝負<rt>しょうぶ</rt>
                 </ruby>
-                だ。 おトクは“
-                <ruby>
-                  探偵<rt>たんてい</rt>
-                </ruby>
-                の
-                <ruby>
-                  帽子<rt>ぼうし</rt>
-                </ruby>
-                と
-                <ruby>
-                  頭<rt>あたま</rt>
-                </ruby>
-                のあいだ”に
+                だ。おトクは
+                <span className="text-yellow-300 font-bold">
+                  「
+                  <ruby>
+                    探偵<rt>たんてい</rt>
+                  </ruby>
+                  の
+                  <ruby>
+                    帽子<rt>ぼうし</rt>
+                  </ruby>
+                  と
+                  <ruby>
+                    頭<rt>あたま</rt>
+                  </ruby>
+                  の
+                  <ruby>
+                    間<rt>あいだ</rt>
+                  </ruby>
+                  」
+                </span>
+                に
                 <ruby>
                   隠<rt>かく</rt>
                 </ruby>
-                した。 さぁ、
+                した。さぁ、
                 <ruby>
                   君達<rt>きみたち</rt>
                 </ruby>
@@ -314,7 +320,7 @@ const NORMAL_QUIZ_STEPS: QuizStep[] = [
             </p>
           </div>
         </div>
-        <div className="bg-[#0f172a] border-2 border-blue-500 rounded-xl p-5 sm:p-6 text-left shadow-[0_0_15px_rgba(59,130,246,0.3)] relative mt-10">
+        <div className="bg-[#0f172a] border-2 border-blue-500 rounded-xl p-5 sm:p-6 text-left shadow-[0_0_15px_rgba(59,130,246,0.3)] relative mt-20">
           <div className="absolute -top-8 -left-3 sm:-top-10 sm:-left-5 bg-[#0f172a] rounded-full p-1.5 z-10">
             <div className="relative w-16 h-16 sm:w-20 sm:h-20">
               <Image
@@ -425,13 +431,12 @@ const NORMAL_QUIZ_STEPS: QuizStep[] = [
     videoSrc: "/ending2.mp4",
     videoDesc: (
       <>
-        <p>
+        <p className="leading-loose">
           <ruby>
             協力<rt>きょうりょく</rt>
           </ruby>
           ありがとう！
-        </p>
-        <p>
+          <br className="sm:hidden" />
           <ruby>
             君<rt>きみ</rt>
           </ruby>
@@ -443,9 +448,8 @@ const NORMAL_QUIZ_STEPS: QuizStep[] = [
           <ruby>
             力<rt>りょく</rt>
           </ruby>
-          は「ホンモノ」だ！
-        </p>
-        <p>
+          は 「ホンモノ」だ！
+          <br className="sm:hidden" />
           <ruby>
             最後<rt>さいご</rt>
           </ruby>

@@ -11,57 +11,64 @@ export default function ItemsTable() {
         </ruby>
       </h2>
       {/* ルビが入るので、space-y-2 を space-y-4 に変更してリストの縦幅にゆとりを持たせました */}
-      <ul className="text-sm sm:text-base md:text-lg text-white font-medium tracking-wide space-y-4 pl-2">
-        <li>
-          ・
-          <ruby>
-            謎<rt>なぞ</rt>
-          </ruby>
-          の
-          <ruby>
-            紙<rt>かみ</rt>
-          </ruby>
+      <ul className="text-sm sm:text-base md:text-lg text-white font-medium tracking-wide space-y-4">
+        <li className="flex items-start">
+          <span className="mr-3 text-pink-500 shrink-0">●</span>
+          <span>
+            <ruby>
+              謎<rt>なぞ</rt>
+            </ruby>
+            の
+            <ruby>
+              紙<rt>かみ</rt>
+            </ruby>
+          </span>
         </li>
-        <li>
-          ・UQ mobile{" "}
-          <ruby>
-            親子<rt>おやこ</rt>
-          </ruby>
-          <ruby>
-            応援割<rt>おうえんわり</rt>
-          </ruby>
-          のチラシ
+        <li className="flex items-start">
+          <span className="mr-3 text-pink-500 shrink-0">●</span>
+          <span>
+            UQ mobile{" "}
+            <ruby>
+              親子<rt>おやこ</rt>
+            </ruby>
+            <ruby>
+              応援割<rt>おうえんわり</rt>
+            </ruby>
+            のチラシ
+          </span>
         </li>
-        <li>
-          ・
-          <ruby>
-            筆記用具<rt>ひっきようぐ</rt>
-          </ruby>
+        <li className="flex items-start">
+          <span className="mr-3 text-pink-500 shrink-0">●</span>
+          <span>
+            <ruby>
+              筆記用具<rt>ひっきようぐ</rt>
+            </ruby>
+          </span>
         </li>
-        <li>・バインダー</li>
-        <li>・スマートフォン</li>
+        <li className="flex items-start">
+          <span className="mr-3 text-pink-500 shrink-0">●</span>
+          <span>バインダー</span>
+        </li>
+        <li className="flex items-start">
+          <span className="mr-3 text-pink-500 shrink-0">●</span>
+          <span>スマートフォン</span>
+        </li>
       </ul>
       {/* ルビが被らないように leading-loose に変更 */}
       <p className="mt-6 text-xs sm:text-sm text-yellow-300 font-bold tracking-wide leading-loose text-center">
         ※
-        <span className="inline-block">
-          <ruby>
-            足<rt>た</rt>
-          </ruby>
-          りないものがある
-          <ruby>
-            場合<rt>ばあい</rt>
-          </ruby>
-          は
-        </span>
-        <br className="sm:hidden" />
-        <span className="inline-block">
-          スタッフへ
-          <ruby>
-            声<rt>こえ</rt>
-          </ruby>
-          をかけてね
-        </span>
+        <ruby>
+          足<rt>た</rt>
+        </ruby>
+        りないものがある
+        <ruby>
+          場合<rt>ばあい</rt>
+        </ruby>
+        はスタッフへ
+        <ruby>
+          声<rt>こえ</rt>
+        </ruby>
+        をかけてね
       </p>
     </div>
   );

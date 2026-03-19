@@ -37,14 +37,12 @@ export default function AnswerForm({
 
   return (
     <div className="w-full bg-black/90 border-2 border-pink-500 rounded-2xl p-6 sm:p-8 shadow-[0_0_20px_rgba(236,72,153,0.3)] relative z-20 mt-4 text-left transition-all">
-      {/* タイトル */}
       <h2 className="text-xl sm:text-2xl font-bold text-orange-400 mb-6 uppercase tracking-widest border-b border-gray-700 pb-4 text-center">
         {title}
       </h2>
 
       <form action={handleSubmit} className="flex flex-col gap-6">
-        {/* ★ 入力ラベル（ルビ付き） */}
-        <label className="text-white font-bold text-sm sm:text-base">
+        <label className="text-white font-bold text-sm sm:text-base text-center">
           <ruby>
             答<rt>こた</rt>
           </ruby>
@@ -55,7 +53,6 @@ export default function AnswerForm({
           してください
         </label>
 
-        {/* 入力欄 */}
         <input
           name="answer"
           type="text"

@@ -9,6 +9,7 @@ const QUIZ_ANSWERS: Record<Difficulty, Record<number, string[]>> = {
   },
   normal: {
     1: ["親子でお得", "おやこでおとく", "オヤコデオトク", "親子でおトク"],
+    2: ["情報", "じょうほう", "ジョウホウ"],
   },
 };
 
