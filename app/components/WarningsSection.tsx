@@ -19,42 +19,38 @@ export default function WarningsSection() {
             <ruby>
               時間<rt>じかん</rt>
             </ruby>
-            は【10:30～18:30】なので、この
-            <ruby>
-              時間<rt>じかん</rt>
-            </ruby>
-            の
-            <ruby>
-              間<rt>あいだ</rt>
-            </ruby>
-            に
-            <ruby>
-              遊<rt>あそ</rt>
-            </ruby>
-            ぼう！
+            は【10:30～18:30】だ！
           </span>
         </li>
         <li className="flex items-start">
           <span className="mr-3 text-pink-500 shrink-0">●</span>
           <span>
-            ショッピングモールの
+            ショッピングモール
             <ruby>
-              中<rt>なか</rt>
+              内<rt>ない</rt>
             </ruby>
-            では、
+            では
             <ruby>
               走<rt>はし</rt>
             </ruby>
-            らないようにしよう。ゆっくり
-            <ruby>
-              歩<rt>ある</rt>
-            </ruby>
-            いてね！
+            らないようにしよう！
           </span>
         </li>
         <li className="flex items-start">
           <span className="mr-3 text-pink-500 shrink-0">●</span>
           <span>
+            <ruby>
+              他<rt>ほか</rt>
+            </ruby>
+            にも
+            <ruby>
+              遊<rt>あそ</rt>
+            </ruby>
+            んでいる
+            <ruby>
+              人<rt>ひと</rt>
+            </ruby>
+            がいるから、
             <ruby>
               謎<rt>なぞ</rt>
             </ruby>
@@ -62,7 +58,7 @@ export default function WarningsSection() {
             <ruby>
               答<rt>こた</rt>
             </ruby>
-            えは、
+            えは
             <ruby>
               大<rt>おお</rt>
             </ruby>
@@ -74,31 +70,7 @@ export default function WarningsSection() {
             <ruby>
               言<rt>い</rt>
             </ruby>
-            わないようにしよう。
-            <ruby>
-              他<rt>ほか</rt>
-            </ruby>
-            に
-            <ruby>
-              遊<rt>あそ</rt>
-            </ruby>
-            んでいる
-            <ruby>
-              人<rt>ひと</rt>
-            </ruby>
-            もいるから、
-            <ruby>
-              小<rt>ちい</rt>
-            </ruby>
-            さな
-            <ruby>
-              声<rt>こえ</rt>
-            </ruby>
-            で
-            <ruby>
-              話<rt>はな</rt>
-            </ruby>
-            そう！
+            わないようにしよう！
           </span>
         </li>
         <li className="flex items-start">
@@ -115,15 +87,15 @@ export default function WarningsSection() {
             <ruby>
               時<rt>とき</rt>
             </ruby>
-            は、Webページの
+            は、
             <ruby>
               右下<rt>みぎした</rt>
             </ruby>
-            にある「ヒントボタン」を
+            のボタンからヒントを
             <ruby>
-              押<rt>お</rt>
+              見<rt>み</rt>
             </ruby>
-            してヒントをみよう。 それでもわからなかったら、
+            よう！それでもわからない時は
             <ruby>
               先輩<rt>せんぱい</rt>
             </ruby>
