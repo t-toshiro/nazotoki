@@ -6,7 +6,7 @@ export default function Poster() {
       <div className="w-full flex justify-center pt-6 md:pt-10 px-4">
         <div className="relative w-full max-w-2xl aspect-[3/4] pointer-events-none select-none overflow-hidden">
           <Image
-            src="/poster.png"
+            src="/poster_urawamisono.png"
             alt="未来通信探偵 ポスター"
             fill
             className="object-contain object-top"
